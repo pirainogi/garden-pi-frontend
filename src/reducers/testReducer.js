@@ -2,7 +2,7 @@ export default (state = {}, action) => {
 
  switch (action.type) {
 
-  case 'SIMPLE_ACTION':
+  case 'TEST_ACTION':
    return {
     result: action.payload
   }
