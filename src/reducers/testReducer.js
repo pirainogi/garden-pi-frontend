@@ -1,13 +1,19 @@
-export default (state = {}, action) => {
+const defaultState = {
+  result: 'empty'
+}
 
- switch (action.type) {
+function reducer(prevState = defaultState, action){
+  console.log('test reducer', action);
+  switch (action.type) {
 
-  case 'TEST_ACTION':
-   return {
-    result: action.payload
+   case 'TEST_ACTION':
+    return {
+     result: action.payload
+   }
+   default:
+    return prevState
   }
-  default:
-   return state
- }
 
 }
+
+export default reducer;
