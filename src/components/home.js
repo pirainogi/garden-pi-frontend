@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 import '../css/home.css'
 import Footer from './footer'
 
@@ -20,8 +21,8 @@ const Home = () => {
           <h3> TAGLINE TAGLINE TAGLINE </h3>
         </div>
         <div className="bottomhalf">
-          <button>Login</button>
-          <button>Signup</button>
+          <NavLink to="/login" activeClassName="active" id="navlink">Login</NavLink>
+          <NavLink to="/signup" activeClassName="active" id="navlink">Signup</NavLink>
         </div>
       </div>
       <Footer />

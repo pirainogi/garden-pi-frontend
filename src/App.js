@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { testAction } from './actions/testAction';
+import { loginAction } from './actions/actions';
 
 import './App.css';
 import Home from './components/home';
@@ -10,7 +10,7 @@ import Signup from './containers/signup'
 
 
 const mapDispatchToProps = dispatch => ({
-  testAction: () => dispatch(testAction())
+  login: () => dispatch(loginAction())
 })
 
 class App extends Component {
