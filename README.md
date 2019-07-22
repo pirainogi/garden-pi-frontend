@@ -1,3 +1,20 @@
+# Component Hierarchy
+
+App
+- Home
+- Login (Login Form)
+- Signup (Signup Form)
+- Profile (User Info, Plant Info [Plants])
+- Edit Profile (User Info Form)
+- User Default (Plant Carousel, Plant Specs [Plant Detail, Icons])
+- My Plants (Plant Group Carousel, Plant Groups [Plant Group Specs, Plant Icons])
+- Create Plant (Create Plant Form)
+- Remove Plant Modal
+- About
+- Header
+- Footer
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
