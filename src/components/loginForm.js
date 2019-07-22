@@ -15,7 +15,6 @@ class LoginForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    
   }
 
   render(){
