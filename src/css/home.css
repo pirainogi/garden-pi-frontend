@@ -17,15 +17,26 @@
 .tophalf h1 {
   color: white;
   font-size: 50px;
+  text-align: center;
+}
+
+.tophalf h3 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
 }
 
 .tophalf p {
   color: white;
-  font-size: 30px;
+  font-size: 13px;
 }
 
 .bottomhalf {
   border: solid;
   border-width: 3px;
   grid-area: bottom;
+}
+
+.bottomhalf button {
+  
 }
