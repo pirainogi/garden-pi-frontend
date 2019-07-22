@@ -1,0 +1,31 @@
+.container {
+  display: grid;
+  grid-template-rows: 60vh 40vh;
+  grid-template-areas:
+  "top"
+  "bottom";
+}
+
+.tophalf {
+  border: solid;
+  border-width: 3px;
+  grid-area: top;
+  background-color: #6B8E23;
+  opacity: .71;
+}
+
+.tophalf h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.tophalf p {
+  color: white;
+  font-size: 30px;
+}
+
+.bottomhalf {
+  border: solid;
+  border-width: 3px;
+  grid-area: bottom;
+}
