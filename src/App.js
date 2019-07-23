@@ -9,15 +9,11 @@ import Login from './containers/login';
 import Signup from './containers/signup'
 
 
-const mapDispatchToProps = dispatch => ({
-  login: () => dispatch(loginAction())
-})
+
 
 class App extends Component {
 
-  testAction = (e) => {
-    this.props.testAction()
-  }
+
 
   render(){
     return (
@@ -32,6 +28,10 @@ class App extends Component {
   }
 
 }
+
+const mapDispatchToProps = dispatch => ({
+  login: () => dispatch(loginAction())
+})
 
 function mapStateToProps(state){
   console.log('map state to props', state);

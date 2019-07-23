@@ -15,6 +15,21 @@ class LoginForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    fetch('http://localhost:3000/api/v1/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: {
+        JSON.stringify({
+          email: this.state.email,
+          password: this.state.password
+        })
+      }
+    })
+    .then(res => res.json())
+    .then(console.log(data);)
   }
 
   render(){

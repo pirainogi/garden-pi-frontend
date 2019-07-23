@@ -7,13 +7,13 @@ function reducer(prevState, action){
   switch(action.type) {
 
     case 'LOGIN':
-      return {...state, currentUser: action.payload}
+      return {...prevState, currentUser: action.payload}
 
     case 'LOGOUT':
-      return {...state, currentUser: null}
-      
+      return {...prevState, currentUser: null}
+
     case 'SIGNUP':
-      return {...state, currentUser: action.payload}
+      return {...prevState, currentUser: action.payload}
 
     default:
       return prevState
