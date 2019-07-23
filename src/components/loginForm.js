@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions/actions'
 
 class LoginForm extends Component {
 
@@ -16,23 +18,11 @@ class LoginForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     console.log('sending the login fetch');
-    fetch('http://localhost:3000/api/v1/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        email: this.state.email,
-        password: this.state.password
-      })
-    })
-    .then(res => res.json())
-    .then(data => console.log(data))
+    this.props.loginUser(this.state)
   }
 
   render(){
-    console.log(this.state);
+    console.log('login form component state', this.state, this.props);
     return(
       <div>
         <h1>I am the Login Form</h1>
@@ -53,4 +43,13 @@ class LoginForm extends Component {
 
 } // end of class
 
-export default LoginForm;
+
+
+const mapStateToProps = (state) => {
+  console.log('app state', state);
+  return {
+    state
+  }
+}
+
+export default connect(mapStateToProps, actions)(LoginForm);

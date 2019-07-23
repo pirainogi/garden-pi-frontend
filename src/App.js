@@ -23,15 +23,17 @@ class App extends Component {
     );
   }
 
-} // end of app component 
+} // end of app component
 
-const mapDispatchToProps = dispatch => ({
-  login: () => dispatch(loginAction())
-})
+// const mapDispatchToProps = dispatch => ({
+//   login: () => dispatch(loginAction())
+// })
 
-function mapStateToProps(state){
+const mapStateToProps = state => {
   console.log('map state to props', state);
-  return {...state.testReducer}
+  return {
+    state
+  }
 }
 
-export default connect(null, null)(App);
+export default connect(mapStateToProps)(App);

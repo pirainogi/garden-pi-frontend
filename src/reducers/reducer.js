@@ -2,21 +2,22 @@ const defaultState = {
   currentUser: null,
 }
 
-function reducer(prevState, action){
+function reducer(state = defaultState, action){
   // console.log('test reducer', action);
   switch(action.type) {
 
+    case 'SIGNUP':
+      return {...state, currentUser: action.payload}
+
     case 'LOGIN':
-      return {...prevState, currentUser: action.payload}
+      debugger
+      return {...state, currentUser: action.payload}
 
     case 'LOGOUT':
-      return {...prevState, currentUser: null}
-
-    case 'SIGNUP':
-      return {...prevState, currentUser: action.payload}
+      return {...state, currentUser: null}
 
     default:
-      return prevState
+      return state
   }
 
 }
