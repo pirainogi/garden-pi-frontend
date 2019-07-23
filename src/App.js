@@ -8,11 +8,7 @@ import Home from './components/home';
 import Login from './containers/login';
 import Signup from './containers/signup'
 
-
-
-
 class App extends Component {
-
 
 
   render(){
@@ -27,7 +23,7 @@ class App extends Component {
     );
   }
 
-}
+} // end of app component 
 
 const mapDispatchToProps = dispatch => ({
   login: () => dispatch(loginAction())

@@ -17,6 +17,22 @@ class SignupForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    console.log('sending the fetch');
+    fetch('http://localhost:3000/api/v1/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body:
+        JSON.stringify({
+          name: this.state.name,
+          email: this.state.email,
+          password: this.state.password
+        })
+      })
+    .then(res => res.json())
+    .then(data => console.log(data))
   }
 
   render(){
@@ -24,11 +40,11 @@ class SignupForm extends Component {
     return(
       <div>
         <h1>I am the Signup Form</h1>
-        <form>
-        <label>
-          Name (First and Last):
-          <input type="text" name="name" onChange={this.handleChange} value={this.state.name}/>
-        </label>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Name (First and Last):
+            <input type="text" name="name" onChange={this.handleChange} value={this.state.name}/>
+          </label>
           <label>
             Email:
             <input type="text" name="email" onChange={this.handleChange} value={this.state.email}/>

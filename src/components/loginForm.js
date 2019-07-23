@@ -15,21 +15,20 @@ class LoginForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    fetch('http://localhost:3000/api/v1/users', {
+    console.log('sending the login fetch');
+    fetch('http://localhost:3000/api/v1/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: {
-        JSON.stringify({
-          email: this.state.email,
-          password: this.state.password
-        })
-      }
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password
+      })
     })
     .then(res => res.json())
-    .then(console.log(data);)
+    .then(data => console.log(data))
   }
 
   render(){
@@ -37,7 +36,7 @@ class LoginForm extends Component {
     return(
       <div>
         <h1>I am the Login Form</h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>
             Email:
             <input type="text" name="email" onChange={this.handleChange} value={this.state.email}/>
