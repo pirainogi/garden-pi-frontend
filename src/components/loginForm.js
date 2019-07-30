@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import * as actions from '../actions/actions'
 
 class LoginForm extends Component {
@@ -19,10 +20,11 @@ class LoginForm extends Component {
     e.preventDefault()
     console.log('sending the login fetch');
     this.props.loginUser(this.state)
+    this.props.history.push('/profile')
   }
 
   render(){
-    console.log('login form component state', this.state, this.props);
+    console.log('login form component state', 'state:', this.state, "props:", this.props);
     return(
       <div>
         <h1>I am the Login Form</h1>
@@ -50,4 +52,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, actions)(LoginForm);
+export default connect(mapStateToProps, actions)(withRouter(LoginForm));

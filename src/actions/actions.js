@@ -40,7 +40,14 @@ function signupUser(userInfo){
   }
 }
 
+function logoutUser(){
+  return dispatch => dispatch({
+    type: "LOGOUT"
+  })
+}
+
 export {
   loginUser,
-  signupUser
+  signupUser,
+  logoutUser,
 };

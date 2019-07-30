@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class UserInfo extends Component {
 
   render(){
-    console.log('user info', this.state, this.props);
+    console.log('user info render', this.props.state);
     return(
       <div>
         <h1>I am the User Info </h1>
@@ -15,7 +15,7 @@ class UserInfo extends Component {
 } // end of class
 
 const mapStateToProps = (state) => {
-  console.log('app state', state);
+  console.log('user info', state);
   return {
     state
   }
