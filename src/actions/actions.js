@@ -11,11 +11,12 @@ function loginUser(userInfo){
          password: userInfo.password
        })
      })
-     .then(res => res.json())
-     .then(data => dispatch({
-       type: "LOGIN", payload: data.user
-     }))
-   }
+    .then(res => res.json())
+    .then(data => {
+      localStorage.setItem('token', data.jwt)
+      dispatch({type: "LOGIN", payload: data.user})
+    })
+  }
 }
 
 function signupUser(userInfo){
@@ -33,17 +34,18 @@ function signupUser(userInfo){
       })
     })
     .then(res => res.json())
-    // .then(data => console.log(data))
-    .then(data => dispatch({
-      type: "SIGNUP", payload: data.user
-    }))
+    .then(data => {
+      localStorage.setItem('token', data.jwt)
+      dispatch({type: "SIGNUP", payload: data.user})
+    })
   }
 }
 
 function logoutUser(){
-  return dispatch => dispatch({
-    type: "LOGOUT"
-  })
+  return dispatch => {
+    localStorage.removeItem('token')
+    dispatch({type: "LOGOUT"})
+  }
 }
 
 export {

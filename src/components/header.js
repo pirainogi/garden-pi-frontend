@@ -10,7 +10,6 @@ const Header = (props) => {
     console.log('logging out', props);
     props.logoutUser()
     props.history.push('/')
-
   }
 
   return(
