@@ -10,7 +10,6 @@ function reducer(state = defaultState, action){
       return {...state, currentUser: action.payload}
 
     case 'LOGIN':
-      console.log('login reducer', action.payload);
       return {...state, currentUser: action.payload}
 
     case 'LOGOUT':

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions/actions'
 
 class SignupForm extends Component {
 
@@ -18,21 +20,12 @@ class SignupForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     console.log('sending the fetch');
-    fetch('http://localhost:3000/api/v1/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body:
-        JSON.stringify({
-          name: this.state.name,
-          email: this.state.email,
-          password: this.state.password
-        })
-      })
-    .then(res => res.json())
-    .then(data => console.log(data))
+    if(this.state.password === this.state.matching_password){
+      this.props.signupUser(this.state)
+    } else {
+      alert(`Your passwords don't match! Try again.`)
+    }
+
   }
 
   render(){
@@ -65,4 +58,11 @@ class SignupForm extends Component {
 
 }//end of class
 
-export default SignupForm;
+const mapStateToProps = (state) => {
+  console.log('app state', state);
+  return {
+    state
+  }
+}
+
+export default connect(mapStateToProps, actions)(SignupForm);
