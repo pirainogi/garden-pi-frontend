@@ -12,7 +12,6 @@ function loginUser(userInfo){
        })
      })
      .then(res => res.json())
-     // .then(data => console.log(data.user))
      .then(data => dispatch({
        type: "LOGIN", payload: data.user
      }))
