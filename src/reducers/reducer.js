@@ -6,10 +6,17 @@ function reducer(state = defaultState, action){
   // console.log('test reducer', action);
   switch(action.type) {
 
-   case 'LOGIN':
-    return {...state, currentUser: action.payload}
-   default:
-    return state
+    case 'SIGNUP':
+      return {...state, currentUser: action.payload}
+
+    case 'LOGIN':
+      return {...state, currentUser: action.payload}
+
+    case 'LOGOUT':
+      return {...state, currentUser: null}
+
+    default:
+      return state
   }
 
 }

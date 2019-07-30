@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import * as actions from '../actions/actions'
 
 class LoginForm extends Component {
 
@@ -15,15 +18,17 @@ class LoginForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    
+    console.log('sending the login fetch');
+    this.props.loginUser(this.state)
+    this.props.history.push('/profile')
   }
 
   render(){
-    console.log(this.state);
+    console.log('login form component state', 'state:', this.state, "props:", this.props);
     return(
       <div>
         <h1>I am the Login Form</h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>
             Email:
             <input type="text" name="email" onChange={this.handleChange} value={this.state.email}/>
@@ -40,4 +45,11 @@ class LoginForm extends Component {
 
 } // end of class
 
-export default LoginForm;
+const mapStateToProps = (state) => {
+  console.log('app state', state);
+  return {
+    state
+  }
+}
+
+export default connect(mapStateToProps, actions)(withRouter(LoginForm));
