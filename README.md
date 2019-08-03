@@ -1,12 +1,17 @@
 # GARDEN PARTY
-Frontend developed by Gabbie Piraino; project developed with Steven Balasta, Ian Hollander, and Vishal Patel
+Frontend developed by Gabbie Piraino; project developed with ![Steven Balasta](https://github.com/sbal13), ![Ian Hollander](https://github.com/ihollander), and ![Vishal Patel](https://github.com/vishalpatel2890)
 
 ** Work in Progress **
 
 ## Built With
-- Ruby on Rails
-- React.js
+- Python
+- Ruby
 - Javascript
+
+- AWS Dynamo DB
+- AWS Lambda
+- Rails
+- React
 - HTML5 and CSS3
 
 ## Prerequisites
