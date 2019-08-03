@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PlantCard from '../components/plantCard'
+import PlantCard from '../components/plantCard';
+import '../css/userPlants.css';
 
 class UserPlants extends Component {
 
@@ -11,7 +12,7 @@ class UserPlants extends Component {
   render(){
     console.log('user info render', this.props);
     return(
-      <div>
+      <div className="userPlants">
         <h1>I am the User's Plants </h1>
         <button onClick={this.createPlant}>Create a New Plant (I do nothing yet)</button>
         <PlantCard />

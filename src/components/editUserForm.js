@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import * as actions from '../actions/actions'
+import * as actions from '../actions/actions';
+import '../css/editUserForm.css';
 
 class EditUserForm extends Component {
 
@@ -25,7 +26,7 @@ class EditUserForm extends Component {
   render(){
     console.log('edit user', 'state:', this.state, "props:", this.props);
     return(
-      <div>
+      <div className="editUserForm">
         <h1>I am the Edit User Form (I do nootthinnggggg)</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
