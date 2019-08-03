@@ -1,3 +1,38 @@
+# GARDEN PARTY
+Frontend developed by Gabbie Piraino; project developed with Steven Balasta, Ian Hollander, and Vishal Patel
+
+** Work in Progress **
+
+## Built With
+- Ruby on Rails
+- React.js
+- Javascript
+- HTML5 and CSS3
+
+## Prerequisites
+
+You will need `node` or `yarn` installed on your computer in order to run this app.
+
+In order to run this app, first clone the server repo down onto your local machine and follow the instructions in the readme to spin up the server. Then clone this repo down onto your local machine and navigate to that directory. Then install the necessary dependencies with either:
+
+- npm install
+- yarn install
+
+Then you can start running the program with `npm start`.
+
+## NPM Packages
+- Redux
+- React-DOM
+- React-Router-DOM
+
+# Features
+- New clients can create new accounts that are authenticated and authorized
+- Users are authenticated with `bcrypt` and `JWT` upon login  
+- Users can edit and update their profile information, or delete their account
+- Users can create and delete plants
+- Users can group their plants
+- Actions instruct users on the care and management of their plants
+
 # Component Hierarchy
 
 App
