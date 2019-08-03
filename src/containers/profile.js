@@ -3,6 +3,7 @@ import UserInfo from '../components/userInfo';
 import EditUser from '../components/editUser';
 import UserPlants from './userPlants';
 import Header from '../components/header';
+import Footer from '../components/footer';
 
 const Profile = () => {
 
@@ -13,6 +14,7 @@ const Profile = () => {
       <UserInfo />
       <EditUser />
       <UserPlants />
+      <Footer />
     </div>
   )
 }

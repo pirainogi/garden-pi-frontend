@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import * as actions from '../actions/actions'
+import '../css/header.css';
+
 
 const Header = (props) => {
 
@@ -13,7 +15,7 @@ const Header = (props) => {
   }
 
   return(
-    <div>
+    <div className="header">
       <h4> I am the Header</h4>
       <button onClick={() => loggingOut()}>logout</button>
     </div>
