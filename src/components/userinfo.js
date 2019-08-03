@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import '../css/userInfo.css';
 
 class UserInfo extends Component {
 
   render(){
     console.log('user info render', this.props);
     return(
-      <div>
+      <div className="userInfo">
         <h1>I am the User Info </h1>
         <p>
           { this.props.state.currentUser

@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import '../css/plantCard.css';
 
 const PlantCard = () => {
 
     return(
-      <div>
+      <div className="plantCard"> 
         <h1>I am a plant I am a card </h1>
       </div>
     )
