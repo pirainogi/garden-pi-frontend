@@ -1,12 +1,17 @@
 # GARDEN PARTY
-Frontend developed by Gabbie Piraino; project developed with Steven Balasta, Ian Hollander, and Vishal Patel
+Frontend developed by Gabbie Piraino; project developed with ![Steven Balasta](https://github.com/sbal13), ![Ian Hollander](https://github.com/ihollander), and ![Vishal Patel](https://github.com/vishalpatel2890)
 
 ** Work in Progress **
 
 ## Built With
-- Ruby on Rails
-- React.js
+- Python
+- Ruby
 - Javascript
+
+- AWS Dynamo DB
+- AWS Lambda
+- Rails
+- React
 - HTML5 and CSS3
 
 ## Prerequisites
@@ -15,8 +20,8 @@ You will need `node` or `yarn` installed on your computer in order to run this a
 
 In order to run this app, first clone the server repo down onto your local machine and follow the instructions in the readme to spin up the server. Then clone this repo down onto your local machine and navigate to that directory. Then install the necessary dependencies with either:
 
-- npm install
-- yarn install
+- `npm install`
+- `yarn install`
 
 Then you can start running the program with `npm start`.
 
