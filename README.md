@@ -1,18 +1,27 @@
-# GARDEN PARTY
-Frontend developed by Gabbie Piraino; project developed with ![Steven Balasta](https://github.com/sbal13), ![Ian Hollander](https://github.com/ihollander), and ![Vishal Patel](https://github.com/vishalpatel2890)
+# GARDEN PI
+Frontend developed by [Gabbie Piraino](https://github.com/pirainogi); project developed with [Steven Balasta](https://github.com/sbal13), [Ian Hollander](https://github.com/ihollander), and [Vishal Patel](https://github.com/vishalpatel2890)
 
 ** Work in Progress **
 
 ## Built With
-- Python
-- Ruby
-- Javascript
+* Python
+* Ruby
+* Javascript
 
-- AWS Dynamo DB
-- AWS Lambda
-- Rails
-- React
-- HTML5 and CSS3
+* AWS DynamoDB
+* AWS Lambda
+* Rails
+* React
+* HTML5
+* CSS3
+
+Please find the Rails database at [Garden-Pi-API](https://github.com/garden-pi/garden-pi-api). **You will need to create an API key with the Trefle API in order to seed your data.**
+
+Please find the Lambda package at [Garden-Pi-Lambda](https://github.com/garden-pi/garden-pi-lambda)
+
+Please find the Pi package at [Garden-Pi-Device](https://github.com/garden-pi/garden-pi-device)
+
+Please find the AWS IOT at (Garden-Pi-IOT)(https://github.com/garden-pi/garden-pi-aws-iot)
 
 ## Prerequisites
 
