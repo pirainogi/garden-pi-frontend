@@ -20,8 +20,8 @@ You will need `node` or `yarn` installed on your computer in order to run this a
 
 In order to run this app, first clone the server repo down onto your local machine and follow the instructions in the readme to spin up the server. Then clone this repo down onto your local machine and navigate to that directory. Then install the necessary dependencies with either:
 
-- npm install
-- yarn install
+- `npm install`
+- `yarn install`
 
 Then you can start running the program with `npm start`.
 
