@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import * as actions from '../actions/actions'
+import '../css/loginForm.css';
+
 
 class LoginForm extends Component {
 
@@ -26,7 +28,7 @@ class LoginForm extends Component {
   render(){
     console.log('login form component state', 'state:', this.state, "props:", this.props);
     return(
-      <div>
+      <div className="loginForm">
         <h1>I am the Login Form</h1>
         <form onSubmit={this.handleSubmit}>
           <label>

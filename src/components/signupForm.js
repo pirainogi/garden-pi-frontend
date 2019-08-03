@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions'
+import '../css/signupForm.css';
+
 
 class SignupForm extends Component {
 
@@ -31,7 +33,7 @@ class SignupForm extends Component {
   render(){
     console.log(this.state);
     return(
-      <div>
+      <div className="signupForm">
         <h1>I am the Signup Form</h1>
         <form onSubmit={this.handleSubmit}>
           <label>

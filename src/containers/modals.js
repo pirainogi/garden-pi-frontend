@@ -6,6 +6,7 @@ import CreatePlantModal from '../components/FeedbackModal.jsx';
 import DeletePlantModal from '../components/BoxDetailsModal.jsx';
 
 const Modals = props => {
+  
   switch (props.currentModal) {
     case 'CREATE_PLANT':
       return <CreatePlantModal {...props}/>;
