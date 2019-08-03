@@ -21,7 +21,7 @@ Please find the Lambda package at [Garden-Pi-Lambda](https://github.com/garden-p
 
 Please find the Pi package at [Garden-Pi-Device](https://github.com/garden-pi/garden-pi-device)
 
-Please find the AWS IOT at (Garden-Pi-IOT)(https://github.com/garden-pi/garden-pi-aws-iot)
+Please find the AWS IOT at [Garden-Pi-IOT](https://github.com/garden-pi/garden-pi-aws-iot)
 
 ## Prerequisites
 
