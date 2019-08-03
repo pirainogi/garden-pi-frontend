@@ -1,5 +1,6 @@
 const defaultState = {
   currentUser: null,
+  currentModal: null,
 }
 
 function reducer(state = defaultState, action){
