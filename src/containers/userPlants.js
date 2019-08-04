@@ -13,8 +13,12 @@ class UserPlants extends Component {
     console.log('user info render', this.props);
     return(
       <div className="userPlants">
-        <h1>I am the User's Plants </h1>
-        <button onClick={this.createPlant}>Create a New Plant (I do nothing yet)</button>
+        <div className='user-plant-title'>
+          <span>My Plants</span>
+        </div>
+        <div className='create-plant-row'>
+          <button className='create-plant-btn' onClick={this.createPlant}>Create New Plant</button>
+        </div>
         <PlantCard />
       </div>
     )

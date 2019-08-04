@@ -1,11 +1,7 @@
 .editUser {
-  border-style: solid;
+  /* border-style: solid;
   border-width: 3px;
-  border-color: teal;
-  /* display: flex;
-  flex-direction: row;
-  position: relative;
-  justify-content: space-evenly; */
+  border-color: teal; */
 }
 
 .edit-user-btn {
@@ -15,6 +11,7 @@
   padding-left: 4vh;
   padding-right: 4vh;
   padding-bottom: 1vh;
+  margin-left: 1vh;
   color: white;
   text-decoration: none;
   font-size: 2vw;
