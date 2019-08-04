@@ -8,13 +8,14 @@ class UserInfo extends Component {
     console.log('user info render', this.props);
     return(
       <div className="userInfo">
-        <h1>I am the User Info </h1>
-        <p>
-          { this.props.state.currentUser
-            ? this.props.state.currentUser.email
-            : null
-          }
-        </p>
+        { this.props.state.currentUser
+          ? <p>this.props.state.currentUser.name</p>
+          : <p>name</p>
+        }
+        { this.props.state.currentUser
+          ? <p>this.props.state.currentUser.email</p>
+          : <p>email</p>
+        }
       </div>
     )
   }
