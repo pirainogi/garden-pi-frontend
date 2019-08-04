@@ -2,4 +2,50 @@
   border-style: solid;
   border-width: 3px;
   border-color: purple;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header * {
+  display: inline;
+}
+
+.header h4 {
+  margin: 20px;
+}
+
+.navWide {
+  display: none;
+}
+
+.navNarrow {
+  p {
+    float: left
+  }
+  .narrowLinks {
+    display: none;
+
+    h4 {
+      display: block;
+      float: left;
+      clear: left;
+    }
+  }
+}
+
+@media (min-width: 480px){
+  header {
+    .navWide {
+      display: block;
+    }
+    .navNarrow {
+      display: none;
+    }
+  }
 }

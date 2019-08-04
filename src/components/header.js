@@ -14,10 +14,36 @@ const Header = (props) => {
     props.history.push('/')
   }
 
+  let navToggle = () => {
+    let links = document.querySelector('.narrowLinks')
+    if(links.style.display === 'block'){
+      links.style.display = 'none';
+    } else {
+      links.style.display = 'block';
+    }
+  }
+
   return(
     <div className="header">
-      <h4> I am the Header</h4>
-      <button onClick={() => loggingOut()}>logout</button>
+      <div className="navWide">
+        <div className="wideDiv">
+          <h4>Logo</h4>
+          <h4>About</h4>
+          <h4>My Plants</h4>
+          <h4>Profile</h4>
+          <button onClick={() => loggingOut()}>logout</button>
+        </div>
+      </div>
+      <div className="navNarrow">
+        <p onClick={() => navToggle()}>icon</p>
+        <div className="narrowLinks">
+          <h4>Logo</h4>
+          <h4>About</h4>
+          <h4>My Plants</h4>
+          <h4>Profile</h4>
+          <button onClick={() => loggingOut()}>logout</button>
+        </div>
+      </div>
     </div>
   )
 }
