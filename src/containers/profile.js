@@ -11,7 +11,9 @@ const Profile = () => {
   return(
     <div className="profile">
       <Header />
-      <h1>I am the Profile Page</h1>
+      <div>
+        <h1>I am the Profile Page</h1>
+      </div>
       <UserInfo />
       <EditUser />
       <UserPlants />
