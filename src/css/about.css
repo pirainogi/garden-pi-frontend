@@ -1,5 +1,39 @@
-.about {
+.container {
   border-style: solid;
   border-width: 3px;
   border-color: thistle;
+  margin-top: 6vh;
+  height: 89vh;
+  padding-left: 4vh;
+  padding-right: 4vh;
+}
+
+.about {
+
+}
+
+.about-content {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #6B8E23;
+  border-radius: 0 0 36px 36px;
+  height: 70vh;
+}
+
+.about-content h1 {
+  margin-left: 4vh;
+  margin-right: 4vh;
+  text-align: justify;
+}
+
+.about-logo {
+  border-style: solid;
+  border-width: .6vh;
+  border-color: #6B8E23;
+  height: 18vh;
+  width: 18vh;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 40%;
+  margin-top: -8vh;
 }
