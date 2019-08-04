@@ -1,17 +1,16 @@
-.container {
+.home-container {
   display: grid;
-  grid-template-rows: 55vh 40vh;
+  grid-template-rows: 45vh 50vh;
   grid-template-areas:
   "top"
   "bottom";
 }
 
 .tophalf {
-  border: solid;
-  border-width: 3px;
+  /* border: solid;
+  border-width: 3px; */
   grid-area: top;
-  background-color: #6B8E23;
-  opacity: .71;
+  background-color: rgb(150, 171, 108);
 }
 
 .tophalf h1 {
@@ -37,6 +36,25 @@
   grid-area: bottom;
 }
 
-.bottomhalf button {
+.link-row {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 7vh;
+  justify-content: space-evenly;
+}
 
+.home-links {
+  background-color: rgb(150, 171, 108);
+  padding-top: 1vh;
+  padding-left: 13vh;
+  padding-right: 13vh;
+  padding-bottom: 1vh;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 4vw;
 }

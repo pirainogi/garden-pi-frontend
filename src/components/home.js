@@ -30,7 +30,7 @@ class Home extends Component {
   render(){
     return(
       <div>
-        <div className="container">
+        <div className="home-container">
           <div className="tophalf">
 
             <form onSubmit={this.handleSubmit} className="loginForm">
@@ -44,8 +44,10 @@ class Home extends Component {
             <h3> TAGLINE TAGLINE TAGLINE </h3>
           </div>
           <div className="bottomhalf">
-            <NavLink to="/login" activeClassName="active" id="navlink">Login</NavLink>
-            <NavLink to="/signup" activeClassName="active" id="navlink">Signup</NavLink>
+            <div className='link-row'>
+              <NavLink to="/login" activeClassName="active" id="navlink" className='home-links'>Login</NavLink>
+              <NavLink to="/signup" activeClassName="active" className='home-links' id="navlink">Signup</NavLink>
+            </div>
           </div>
         </div>
         <Footer />
