@@ -12,15 +12,17 @@ const Profile = () => {
     <div className="profile">
       <Header />
       <div className='topbox'>
-        <div className='default-pic'></div>
+        <div className='inner-profile'>
+          <div className='user-info'>
+            <div className='default-pic'></div>
+            <UserInfo />
+            <EditUser />
+          </div>
+          <div className='plant-info'>
+            <UserPlants />
+          </div>
+        </div>
       </div>
-
-      <div>
-        <h1>I am the Profile Page</h1>
-      </div>
-      <UserInfo />
-      <EditUser />
-      <UserPlants />
       <Footer />
     </div>
   )
