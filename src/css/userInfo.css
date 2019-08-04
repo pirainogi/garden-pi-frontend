@@ -1,9 +1,11 @@
 .userInfo {
-  border-style: solid;
+  /* border-style: solid;
   border-width: 3px;
-  border-color: lime;
+  border-color: lime; */
+  margin: 1vh;
 }
 
 .userInfo p {
-  margin-left: 9vh;
+  margin-left: 8.5vh;
+  padding-top: 1vh;
 }
