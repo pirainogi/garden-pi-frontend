@@ -1,8 +1,6 @@
 .footer {
-  border-style: solid;
-  border-width: 3px;
-  border-color: yellow;
-  height: 3vh;
+  background-color: rgb(150, 171, 108);
+  height: 4vh;
   position: fixed;
   width: 100%;
   left: 0;
@@ -12,4 +10,5 @@
 .footer p {
   text-align: center;
   margin: auto;
+  color: white;
 }
