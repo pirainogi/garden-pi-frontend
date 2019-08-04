@@ -2,5 +2,30 @@
   border-style: solid;
   border-width: 3px;
   border-color: pink;
+  margin-top: 6vh;
+  height: 93vh;
+  margin-left: 3vh;
+  margin-right: 3vh;
+}
+
+.topbox {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #6B8E23;
+  border-radius: 36px 36px 0 0;
+  height: 80px;
+  background-color: #6B8E23;
   margin-top: 5vh;
+}
+
+.default-pic {
+  border-style: solid;
+  border-width: 4px;
+  border-color: white;
+  height: 100px;
+  width: 100px;
+  background-color: #6B8E23;
+  border-radius: 50%;
+  margin-left: 5vh;
+  margin-top: 30px;
 }
