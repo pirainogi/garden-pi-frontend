@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 
 import * as actions from '../actions/actions'
 import '../css/header.css';
@@ -27,21 +27,21 @@ const Header = (props) => {
     <div className="header">
       <div className="navWide">
         <div className="wideDiv">
-          <h4>Logo</h4>
-          <h4>About</h4>
+          <NavLink to='/about' activeClassName='active'>About</NavLink>
           <h4>My Plants</h4>
           <h4>Profile</h4>
           <button onClick={() => loggingOut()}>logout</button>
         </div>
       </div>
       <div className="navNarrow">
-        <p onClick={() => navToggle()}>icon</p>
+        <img src="https://img.icons8.com/android/24/000000/menu.png" alt="menu icon" onClick={() => navToggle()}></img>
         <div className="narrowLinks">
-          <h4>Logo</h4>
-          <h4>About</h4>
-          <h4>My Plants</h4>
-          <h4>Profile</h4>
-          <button onClick={() => loggingOut()}>logout</button>
+          <ul>
+            <li><NavLink to='/about' activeClassName='active' className='link'>About</NavLink></li>
+            <li><NavLink to='/garden' activeClassName='active' className='link'>My Plants</NavLink></li>
+            <li><NavLink to='/profile' activeClassName='active' className='link'>Profile</NavLink></li>
+            <li><button className='link' onClick={() => loggingOut()}>logout</button></li>
+          </ul>
         </div>
       </div>
     </div>

@@ -66,6 +66,8 @@ App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Hamburger Icon created by [Icons8](https://icons8.com/icon/12371/menu")
+
 ## Available Scripts
 
 In the project directory, you can run:

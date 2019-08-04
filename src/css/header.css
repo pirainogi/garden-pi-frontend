@@ -1,8 +1,13 @@
 .header {
   border-style: solid;
   border-width: 3px;
-  border-color: purple;
+  border-color: #6B8E23;
+  /* background-color: #6B8E23; */
+  opacity: .71;
+  overflow: hidden;
   position: fixed;
+  padding-left: 10px;
+  padding-top: 5px;
   top: 0;
   left: 0;
   right: 0;
@@ -16,8 +21,16 @@
   display: inline;
 }
 
-.header h4 {
+.link {
   margin: 20px;
+  color: #404040;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.active {
+  background-color: #6B8E23;
+  color: white;
 }
 
 .navWide {
@@ -25,8 +38,9 @@
 }
 
 .navNarrow {
-  p {
-    float: left
+  img {
+    float: left;
+    margin-left: 10px;
   }
   .narrowLinks {
     display: none;
