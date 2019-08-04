@@ -21,7 +21,7 @@ Please find the Lambda package at [Garden-Pi-Lambda](https://github.com/garden-p
 
 Please find the Pi package at [Garden-Pi-Device](https://github.com/garden-pi/garden-pi-device)
 
-Please find the AWS IOT at (Garden-Pi-IOT)(https://github.com/garden-pi/garden-pi-aws-iot)
+Please find the AWS IOT at [Garden-Pi-IOT](https://github.com/garden-pi/garden-pi-aws-iot)
 
 ## Prerequisites
 
@@ -65,6 +65,8 @@ App
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Hamburger Icon created by [Icons8](https://icons8.com/icon/12371/menu")
 
 ## Available Scripts
 
