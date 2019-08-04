@@ -11,6 +11,10 @@ const Profile = () => {
   return(
     <div className="profile">
       <Header />
+      <div className='topbox'>
+        <div className='default-pic'></div>
+      </div>
+
       <div>
         <h1>I am the Profile Page</h1>
       </div>
