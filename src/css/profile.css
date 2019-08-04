@@ -15,36 +15,40 @@
   border-width: 1px;
   border-color: #6B8E23;
   border-radius: 36px 36px 0 0;
-  height: 80px;
+  height: 9vh;
   background-color: #6B8E23;
-  margin-top: 5vh;
+  margin-top: 4vh;
 }
 
 .inner-profile {
   display: flex;
   flex-direction: row;
+  height: 83vh;
 }
 
 .user-info {
-  flex-grow: 1;
+  flex-basis: 40%;
   border-style: solid;
   border-color: black;
 }
 
 .default-pic {
   border-style: solid;
-  border-width: 4px;
+  border-width: .4vh;
   border-color: white;
-  height: 100px;
-  width: 100px;
+  height: 13vh;
+  width: 13vh;
   background-color: #6B8E23;
   border-radius: 50%;
   margin-left: 5vh;
-  margin-top: 30px;
+  margin-top: 1vh;
 }
 
 .plant-info {
-  flex-grow: 2;
+  flex-basis: 60%;
   border-style: solid;
-  border-color: black;
+  border-width: 2px;
+  border-color: #6B8E23;
+  border-radius: 0 0 36px 36px;
+  border-top:
 }
