@@ -3,3 +3,7 @@
   border-width: 3px;
   border-color: lime;
 }
+
+.userInfo p {
+  margin-left: 9vh;
+}
