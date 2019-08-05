@@ -10,7 +10,7 @@ const Garden = () => {
   return(
     <div className="garden">
       <Header />
-      <h1>This is where all of the plants live omg (I am a container)</h1>
+      <span>This is where all of the plants live omg (I am a container)</span>
       <PlantCarousel />
       <CurrentPlantView />
       <Footer />
