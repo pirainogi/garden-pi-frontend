@@ -6,7 +6,7 @@ const ActionCard = () => {
 
     return(
       <div className="actionCard">
-        <span>I am an action card </span>
+        <span>action card </span>
       </div>
     )
 

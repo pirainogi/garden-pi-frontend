@@ -6,7 +6,7 @@ const ToDo = () => {
 
   return(
     <div className="todo">
-      <h1>I hold all of the to do cards</h1>
+      <span>I hold all of the to do cards</span>
       <ActionCard />
       <ActionCard />
       <ActionCard />
