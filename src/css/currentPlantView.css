@@ -10,3 +10,10 @@
   border-color: black;
   height: 30vh;
 }
+
+.plant-pic {
+  height: 11vh;
+  width: 11vh;
+  background-color: rgb(150, 171, 108);
+  border-radius: 20px;
+}
