@@ -5,7 +5,7 @@ const HealthMeter = () => {
 
   return(
     <div className="healthMeter">
-      <h2> I will one day be a health meter here much wow </h2>
+      <h2>health meter</h2>
     </div>
   )
 }

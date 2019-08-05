@@ -3,3 +3,10 @@
   border-width: 3px;
   border-color: plum;
 }
+
+.upper-plant-view {
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  height: 30vh;
+}

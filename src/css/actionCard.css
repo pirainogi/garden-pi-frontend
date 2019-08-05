@@ -3,10 +3,9 @@
   border-width: 3px;
   border-color: rgb(150, 171, 108);
   border-radius: 20px;
-  flex-shrink: 0;
-  width: 16vh;
+  /* flex-shrink: 0; */
+  /* width: 18vh; */
   height: 13vh;
-  margin-left: 2.5vh;
   text-align: center;
   padding-top: 1.5vw;
   font-size: 2vh;

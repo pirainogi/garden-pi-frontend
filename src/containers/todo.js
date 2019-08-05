@@ -16,8 +16,6 @@ const ToDo = () => {
       <ActionCard />
       <ActionCard />
       <ActionCard />
-      <ActionCard />
-      <ActionCard />
     </div>
   )
 }
