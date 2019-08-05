@@ -7,8 +7,6 @@
 }
 
 .tophalf {
-  /* border: solid;
-  border-width: 3px; */
   grid-area: top;
   background-color: rgb(150, 171, 108);
 }
