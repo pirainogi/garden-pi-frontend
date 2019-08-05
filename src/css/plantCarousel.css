@@ -3,5 +3,5 @@
   border-width: 3px;
   border-color: skyblue;
   display: flex;
-  flex-direction: row;
+  overflow-x: auto;
 }
