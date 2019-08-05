@@ -1,5 +1,7 @@
 .actionCard {
   border-style: solid;
   border-width: 3px;
-  border-color: tomato;
+  border-color: rgb(150, 171, 108);
+  border-radius: 20px;
+  height: 10vh;
 }
