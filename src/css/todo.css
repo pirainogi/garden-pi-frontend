@@ -1,7 +1,7 @@
 .todo {
-  border-style: solid;
+  /* border-style: solid;
   border-width: 3px;
-  border-color: navy;
+  border-color: navy; */
   display: flex;
-  flex-direction: row;
+  overflow-x: auto;
 }
