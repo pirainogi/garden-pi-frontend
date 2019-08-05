@@ -1,7 +1,10 @@
 .todo {
-  /* border-style: solid;
+  border-style: solid;
   border-width: 3px;
-  border-color: navy; */
-  display: flex;
-  overflow-x: auto;
+  border-color: navy;
+  display: grid;
+  grid-template-columns: 32vh 32vh 32vh;
+  grid-template-rows: auto;
+  height: 35vh;
+  /* overflow-x: auto; */
 }
