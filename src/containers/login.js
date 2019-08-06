@@ -8,7 +8,6 @@ const Login = () => {
   return(
     <div className="login">
       <Header />
-      <h1>I am the Login Page</h1>
       <LoginForm />
     </div>
   )
