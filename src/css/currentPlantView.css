@@ -2,6 +2,7 @@
   border-style: solid;
   border-width: 3px;
   border-color: plum;
+  margin-right: 1.
 }
 
 .upper-plant-view {
@@ -9,6 +10,20 @@
   border-width: 3px;
   border-color: black;
   height: 30vh;
+}
+
+.left-plant-view {
+  border-style: solid;
+  border-width: 3px;
+  border-color: brown;
+}
+
+.plant-basics {
+  border-style: solid;
+  border-width: 3px;
+  border-color: teal;
+  position: relative;
+  margin-left:
 }
 
 .plant-pic {
