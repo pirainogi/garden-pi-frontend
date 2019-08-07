@@ -26,7 +26,7 @@ class LoginForm extends Component {
   }
 
   render(){
-    console.log('login form component state', 'state:', this.state, "props:", this.props);
+    // console.log('login form component state', 'state:', this.state, "props:", this.props);
     return(
       <div>
         <div className="loginForm">
