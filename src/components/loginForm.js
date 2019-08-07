@@ -26,21 +26,16 @@ class LoginForm extends Component {
   }
 
   render(){
-    console.log('login form component state', 'state:', this.state, "props:", this.props);
+    // console.log('login form component state', 'state:', this.state, "props:", this.props);
     return(
       <div className="loginForm">
-        <h1>I am the Login Form</h1>
+        <span className='login-title'>Login to the Garden Party</span>
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Email:
-            <input type="text" name="email" onChange={this.handleChange} value={this.state.email}/>
-          </label>
-          <label>
-            Password:
-            <input type="password" name="password" onChange={this.handleChange} value={this.state.password}/>
-          </label>
-          <input type="submit" value="Submit" />
+            <input type="text" name="email" className='login-input' placeholder='Email' onChange={this.handleChange} value={this.state.email}/>
+            <input type="password" name="password" className='login-input' placeholder='Password' onChange={this.handleChange} value={this.state.password}/>
+          <input type="submit" value="Login" className='login-submit'/>
         </form>
+        <div className='bottombox'></div>
       </div>
     )
   }
