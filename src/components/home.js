@@ -40,7 +40,7 @@ class Home extends Component {
             </form>
 
             <p>Forgot Password?</p>
-            <h1> Join the Garden Pi</h1>
+            <h1> Join the Garden Party</h1>
             <h3> TAGLINE TAGLINE TAGLINE </h3>
           </div>
           <div className="bottomhalf">
