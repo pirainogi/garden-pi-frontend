@@ -33,14 +33,14 @@ class Home extends Component {
         <div className="home-container">
           <div className="tophalf">
 
-            <form onSubmit={this.handleSubmit} className="loginForm">
+            <form onSubmit={this.handleSubmit}>
               <input type="email" name="email" onChange={this.handleChange} value={this.state.email} placeholder="Email"/>
               <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password"/>
               <input type="submit" value="Login" className="button"/>
             </form>
 
             <p>Forgot Password?</p>
-            <h1> Join the Garden Pi</h1>
+            <h1> Join the Garden Party</h1>
             <h3> TAGLINE TAGLINE TAGLINE </h3>
           </div>
           <div className="bottomhalf">

@@ -1,5 +1,63 @@
 .loginForm {
   border-style: solid;
   border-width: 3px;
-  border-color: blue;
+  border-color: rgb(150, 171, 108);
+  border-radius: 36px 36px 0 0;
+  height: 30vh;
+}
+
+.login-title {
+  font-size: 4.5vw;
+  margin-top: 3vh;
+  margin-left: 4vh;
+  color: #404040;
+}
+
+.login-input {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-evenly;
+}
+
+.login-input input {
+  padding-left: 13vh;
+  padding-right: 13vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-top: 4vh;
+  border-radius: 20px;
+}
+
+.login-input input::placeholder {
+  text-align: center;
+  font-size: 3vw;
+}
+
+.login-submit {
+  background-color: rgb(150, 171, 108);
+  padding: .8vw;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 3vw;
+  margin-top: 2vh;
+  margin-left: 5.5vh;
+}
+
+.bottombox {
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(150, 171, 108);
+  border-radius: 0 0 36px 36px;
+  height: 9vh;
+  background-color: rgb(150, 171, 108);
+  /* margin-top: 15vh; */
+}
+
+.signup-link {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5vw;
+  margin-left: 2vh;
 }

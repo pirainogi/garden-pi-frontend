@@ -31,29 +31,25 @@ class SignupForm extends Component {
   }
 
   render(){
-    console.log(this.state);
+    // console.log(this.state);
     return(
-      <div className="signupForm">
-        <h1>I am the Signup Form</h1>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Name (First and Last):
-            <input type="text" name="name" onChange={this.handleChange} value={this.state.name}/>
-          </label>
-          <label>
-            Email:
-            <input type="text" name="email" onChange={this.handleChange} value={this.state.email}/>
-          </label>
-          <label>
-            Password:
-            <input type="password" name="password" onChange={this.handleChange} value={this.state.password}/>
-          </label>
-          <label>
-            Retype Password:
-            <input type="password" name="matching_password" onChange={this.handleChange} value={this.state.matching_password}/>
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+      <div>
+        <div className="signup-container">
+          <div className='signup-title'>
+            <span>Signup for Garden Party</span>
+          </div>
+          <form onSubmit={this.handleSubmit}>
+            <div className='signup-input'>
+              <input type="text" name="name" placeholder='Name (First and Last)' onChange={this.handleChange} value={this.state.name}/>
+              <input type="text" name="email" placeholder='Email' onChange={this.handleChange} value={this.state.email}/>
+              <input type="password" name="password" placeholder='Password' onChange={this.handleChange} value={this.state.password}/>
+              <input type="password" name="matching_password" placeholder='Retype Password' onChange={this.handleChange} value={this.state.matching_password}/>
+            </div>
+            <div className='bottombox'>
+              <input type="submit" value="Submit" className='signup-submit'/>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }

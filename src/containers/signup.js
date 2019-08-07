@@ -8,7 +8,6 @@ const Signup = () => {
   return(
     <div className="signup">
       <Header />
-      <h1>I am the Signup Page</h1>
       <SignupForm />
     </div>
   )
