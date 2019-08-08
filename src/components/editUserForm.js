@@ -9,8 +9,6 @@ class EditUserForm extends Component {
   state = {
     name: '',
     email: '',
-    password: '',
-    new_password: ''
   }
 
   handleChange = (e) => {
@@ -37,8 +35,6 @@ class EditUserForm extends Component {
         <form onSubmit={this.handleSubmit}>
             <input type="text" name="name" placeholder="New Name" onChange={this.handleChange} value={this.state.name}/>
             <input type="text" name="email" placeholder="New Email" onChange={this.handleChange} value={this.state.email}/>
-            <input type="password" name="password" placeholder="New Password" onChange={this.handleChange} value={this.state.password}/>
-            <input type="password" name="password" placeholder="Retype New Password" onChange={this.handleChange} value={this.state.new_password}/>
           <input type="submit" value="Submit" />
         </form>
       </div>

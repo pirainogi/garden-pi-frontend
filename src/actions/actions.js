@@ -51,7 +51,6 @@ function signupUser(userInfo){
       body: JSON.stringify({
         name: userInfo.name,
         email: userInfo.email,
-        password: userInfo.password
       })
     })
     .then(res => res.json())
