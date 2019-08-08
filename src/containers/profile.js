@@ -1,5 +1,5 @@
 import React from 'react';
-import UserInfo from '../components/userInfo';
+import UserInfo from '../components/userinfo';
 import EditUser from '../components/editUser';
 import Header from '../components/header';
 
