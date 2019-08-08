@@ -19,6 +19,9 @@ function reducer(state = defaultState, action){
     case 'LOGOUT':
       return {...state, currentUser: null}
 
+    case 'EDITUSER':
+      return {...state, currentUser: action.payload}
+
     default:
       return state
   }
