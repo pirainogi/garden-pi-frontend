@@ -9,11 +9,11 @@ class UserInfo extends Component {
     return(
       <div className="userInfo">
         { this.props.state.currentUser
-          ? <p>this.props.state.currentUser.name</p>
+          ? <p>{this.props.state.currentUser.name}</p>
           : <p>name</p>
         }
         { this.props.state.currentUser
-          ? <p>this.props.state.currentUser.email</p>
+          ? <p>{this.props.state.currentUser.email}</p>
           : <p>email</p>
         }
       </div>
