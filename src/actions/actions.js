@@ -13,7 +13,7 @@ function loginUser(userInfo){
      })
     .then(res => res.json())
     .then(data => {
-      console.log('data back from server', data);
+      // console.log('data back from server', data);
       localStorage.setItem('token', data.jwt)
       dispatch({type: "LOGIN", payload: data.user})
     })
@@ -23,6 +23,7 @@ function loginUser(userInfo){
 function autoLogin(){
   return dispatch => {
     const token = localStorage.getItem('token')
+    console.log('in autologin', token);
     if (token){
       fetch('http://localhost:3000/api/v1/auto_login', {
         method: 'GET',
@@ -32,6 +33,7 @@ function autoLogin(){
       })
       .then(res => res.json())
       .then(data => {
+        console.log('after fetch', data);
         dispatch({type: "AUTOLOGIN", payload: data.user})
       })
     }

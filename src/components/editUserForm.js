@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+// import { withRouter } from 'react-router-dom';
 import * as actions from '../actions/actions';
 import '../css/editUserForm.css';
 
@@ -20,11 +20,11 @@ class EditUserForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log('sending the edit user fetch');
+    // console.log('sending the edit user fetch');
   }
 
   render(){
-    console.log('edit user', 'state:', this.state, "props:", this.props);
+    // console.log('edit user', 'state:', this.state, "props:", this.props);
     return(
       <div className="editUserForm">
         <h1>I am the Edit User Form (I do nootthinnggggg)</h1>
@@ -50,7 +50,7 @@ class EditUserForm extends Component {
 } // end of class
 
 const mapStateToProps = (state) => {
-  console.log('app state', state);
+  // console.log('app state', state);
   return {
     state
   }

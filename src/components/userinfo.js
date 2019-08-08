@@ -5,7 +5,7 @@ import '../css/userInfo.css';
 class UserInfo extends Component {
 
   render(){
-    console.log('user info render', this.props);
+    // console.log('user info render', this.props);
     return(
       <div className="userInfo">
         { this.props.state.currentUser
@@ -23,7 +23,7 @@ class UserInfo extends Component {
 } // end of class
 
 const mapStateToProps = (state) => {
-  console.log('user info', state);
+  // console.log('user info', state);
   return {
     state
   }

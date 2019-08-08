@@ -10,7 +10,7 @@ class EditUser extends Component {
   }
 
   render(){
-    console.log('edit user render', this.props);
+    // console.log('edit user render', this.props);
     return(
       <div className="editUser">
         <button className="edit-user-btn" onClick={this.editUser}>click me to edit</button>
@@ -22,7 +22,7 @@ class EditUser extends Component {
 } // end of class
 
 const mapStateToProps = (state) => {
-  console.log('user info', state);
+  // console.log('user info', state);
   return {
     state
   }
