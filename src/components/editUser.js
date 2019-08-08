@@ -10,11 +10,16 @@ class EditUser extends Component {
     console.log('click clack edit a user');
   }
 
+  editPassword = () => {
+    console.log('click clack edit pw');
+  }
+
   render(){
     // console.log('edit user render', this.props);
     return(
       <div className="editUser">
-        <button className="edit-user-btn" onClick={this.editUser}>click me to edit</button>
+        <button className="edit-user-btn" onClick={this.editUser}>click me to edit user</button>
+        <button className="edit-pw-btn" onClick={this.editPassword}>click me to edit pw</button>
         <EditUserForm />
         <EditPasswordForm />
       </div>
