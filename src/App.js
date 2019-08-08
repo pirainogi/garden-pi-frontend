@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
-// import { connect } from 'react-redux';
-// import { loginAction } from './actions/actions';
+import { Switch, Route, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from './actions/actions'
+import { loginAction } from './actions/actions';
 
 import './App.css';
 import Home from './components/home';
@@ -13,6 +14,10 @@ import About from './components/about'
 
 class App extends Component {
 
+  componentDidMount(){
+    this.props.autoLogin()
+    this.props.history.push('/profile')
+  }
 
   render(){
     return (
@@ -31,15 +36,11 @@ class App extends Component {
 
 } // end of app component
 
-// const mapDispatchToProps = dispatch => ({
-//   login: () => dispatch(loginAction())
-// })
+const mapStateToProps = state => {
+  console.log('app.js state', state);
+  return {
+    state
+  }
+}
 
-// const mapStateToProps = state => {
-//   console.log('map state to props', state);
-//   return {
-//     state
-//   }
-// }
-
-export default App;
+export default connect(mapStateToProps, actions)(withRouter(App));

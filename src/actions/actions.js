@@ -41,6 +41,24 @@ function loginUser(userInfo){
   }
 }
 
+function autoLogin(){
+  return dispatch => {
+    const token = localStorage.getItem('token')
+    if (token){
+      fetch('http://localhost:3000/api/v1/auto_login', {
+        method: 'GET',
+        headers: {
+          'Authorization': token,
+        },
+      })
+      .then(res => res.json())
+      .then(data => {
+        dispatch({type: "AUTOLOGIN", payload: data.user})
+      })
+    }
+  }
+}
+
 function signupUser(userInfo){
   return dispatch => {
     fetch('http://localhost:3000//api/v1/users', {
@@ -71,7 +89,7 @@ function logoutUser(){
 }
 
 export {
-  // autoLogin,
+  autoLogin,
   loginUser,
   signupUser,
   logoutUser,

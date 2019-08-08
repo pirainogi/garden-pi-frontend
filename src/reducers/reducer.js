@@ -13,6 +13,9 @@ function reducer(state = defaultState, action){
     case 'LOGIN':
       return {...state, currentUser: action.payload}
 
+    case 'AUTOLOGIN':
+      return {...state, currentUser: action.payload}
+
     case 'LOGOUT':
       return {...state, currentUser: null}
 
