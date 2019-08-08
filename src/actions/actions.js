@@ -1,3 +1,23 @@
+function autoLogin(){
+  return dispatch => {
+    const token = localStorage.getItem('token')
+    console.log('in autologin', token);
+    if (token){
+      fetch('http://localhost:3000/api/v1/auto_login', {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log('after fetch', data);
+        dispatch({type: "AUTOLOGIN", payload: data.user})
+      })
+    }
+  }
+}
+
 function loginUser(userInfo){
   return dispatch => {
      fetch('http://localhost:3000/api/v1/login', {
@@ -20,27 +40,9 @@ function loginUser(userInfo){
   }
 }
 
-function autoLogin(){
-  return dispatch => {
-    const token = localStorage.getItem('token')
-    if (token){
-      fetch('http://localhost:3000/api/v1/auto_login', {
-        method: 'GET',
-        headers: {
-          'Authorization': token,
-        },
-      })
-      .then(res => res.json())
-      .then(data => {
-        dispatch({type: "AUTOLOGIN", payload: data.user})
-      })
-    }
-  }
-}
-
 function signupUser(userInfo){
   return dispatch => {
-    fetch('http://localhost:3000//api/v1/users', {
+    fetch('http://localhost:3000/api/v1/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -49,7 +51,6 @@ function signupUser(userInfo){
       body: JSON.stringify({
         name: userInfo.name,
         email: userInfo.email,
-        password: userInfo.password
       })
     })
     .then(res => res.json())
@@ -67,9 +68,32 @@ function logoutUser(){
   }
 }
 
+function editUser(userInfo){
+  return dispatch => {
+
+  }
+}
+
+function editPassword(password){
+  return dispatch => {
+    fetch('http://localhost:3000/api/v1/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        password: password,
+      })
+    })
+  }
+}
+
 export {
-  loginUser,
   autoLogin,
+  loginUser,
   signupUser,
   logoutUser,
+  editUser,
+  editPassword,
 };

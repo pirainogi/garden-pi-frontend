@@ -27,7 +27,6 @@ class SignupForm extends Component {
     } else {
       alert(`Your passwords don't match! Try again.`)
     }
-
   }
 
   render(){

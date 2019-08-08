@@ -10,7 +10,7 @@ class UserPlants extends Component {
   }
 
   render(){
-    console.log('user info render', this.props);
+    // console.log('user info render', this.props);
     return(
       <div className="userPlants">
         <div className='user-plant-title'>
@@ -27,7 +27,7 @@ class UserPlants extends Component {
 } // end of class
 
 const mapStateToProps = (state) => {
-  console.log(`user's plants`, state);
+  // console.log(`user's plants`, state);
   return {
     state
   }

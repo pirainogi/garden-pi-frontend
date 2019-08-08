@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import EditUserForm from '../components/editUserForm';
+import EditPasswordForm from '../components/editPasswordForm';
+
 import '../css/editUser.css'
 
 class EditUser extends Component {
@@ -10,11 +12,12 @@ class EditUser extends Component {
   }
 
   render(){
-    console.log('edit user render', this.props);
+    // console.log('edit user render', this.props);
     return(
       <div className="editUser">
         <button className="edit-user-btn" onClick={this.editUser}>click me to edit</button>
         <EditUserForm />
+        <EditPasswordForm />
       </div>
     )
   }
@@ -22,7 +25,7 @@ class EditUser extends Component {
 } // end of class
 
 const mapStateToProps = (state) => {
-  console.log('user info', state);
+  // console.log('user info', state);
   return {
     state
   }

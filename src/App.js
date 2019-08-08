@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from './actions/actions'
-import { loginAction } from './actions/actions';
 
 import './App.css';
 import Home from './components/home';
@@ -15,8 +14,11 @@ import About from './components/about'
 class App extends Component {
 
   componentDidMount(){
+    console.log('hitting the component did mount');
     this.props.autoLogin()
-    this.props.history.push('/profile')
+    if(window.location.pathname === '/' || window.location.pathname === '/login' || window.location.pathname === '/signup'){
+      this.props.history.push('/profile')
+    }
   }
 
   render(){
@@ -37,7 +39,7 @@ class App extends Component {
 } // end of app component
 
 const mapStateToProps = state => {
-  console.log('app.js state', state);
+  // console.log('app.js state', state);
   return {
     state
   }
