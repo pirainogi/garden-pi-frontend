@@ -74,9 +74,26 @@ function editUser(userInfo){
   }
 }
 
+function editPassword(password){
+  return dispatch => {
+    fetch('http://localhost:3000/api/v1/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        password: password,
+      })
+    })
+  }
+}
+
 export {
   autoLogin,
   loginUser,
   signupUser,
   logoutUser,
+  editUser,
+  editPassword,
 };
