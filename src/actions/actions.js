@@ -1,25 +1,3 @@
-// function autoLogin(){
-//   const token = localStorage.getItem('token')
-//   if (token){
-//     fetch('http://localhost:3000/api/v1/login', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//         'Accept': 'application/json'
-//       },
-//       body: JSON.stringify({
-//         ???
-//       })
-//     })
-//    .then(res => res.json())
-//    .then(data => {
-//      localStorage.setItem('token', data.jwt)
-//      dispatch({type: "LOGIN", payload: data.user})
-//    })
-//  }
-//   }
-// }
-
 function loginUser(userInfo){
   return dispatch => {
      fetch('http://localhost:3000/api/v1/login', {
@@ -39,6 +17,24 @@ function loginUser(userInfo){
       localStorage.setItem('token', data.jwt)
       dispatch({type: "LOGIN", payload: data.user})
     })
+  }
+}
+
+function autoLogin(){
+  return dispatch => {
+    const token = localStorage.getItem('token')
+    if (token){
+      fetch('http://localhost:3000/api/v1/auto_login', {
+        method: 'GET',
+        headers: {
+          'Authorization': token,
+        },
+      })
+      .then(res => res.json())
+      .then(data => {
+        dispatch({type: "AUTOLOGIN", payload: data.user})
+      })
+    }
   }
 }
 
@@ -72,8 +68,8 @@ function logoutUser(){
 }
 
 export {
-  // autoLogin,
   loginUser,
+  autoLogin,
   signupUser,
   logoutUser,
 };
