@@ -15,7 +15,7 @@ class EditUser extends Component {
   }
 
   render(){
-    // console.log('edit user render', this.props);
+    console.log('edit user render', this.props);
     return(
       <div className="editUser">
         <button className="edit-user-btn" onClick={this.editUser}>click me to edit user</button>
