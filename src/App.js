@@ -16,7 +16,9 @@ class App extends Component {
   componentDidMount(){
     console.log('hitting the component did mount');
     this.props.autoLogin()
-    // this.props.history.push('/profile')
+    if(window.location.pathname === '/' || window.location.pathname === '/login' || window.location.pathname === '/signup'){
+      this.props.history.push('/profile')
+    }
   }
 
   render(){
