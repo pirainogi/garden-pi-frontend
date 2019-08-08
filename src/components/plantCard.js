@@ -5,8 +5,8 @@ import '../css/plantCard.css';
 const PlantCard = () => {
 
     return(
-      <div className="plantCard"> 
-        <h1>I am a plant I am a card </h1>
+      <div className="plantCard">
+        <span>Plant Name</span>
       </div>
     )
 

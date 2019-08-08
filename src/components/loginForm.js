@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import * as actions from '../actions/actions'
 import '../css/loginForm.css';
 
@@ -26,21 +26,24 @@ class LoginForm extends Component {
   }
 
   render(){
-    console.log('login form component state', 'state:', this.state, "props:", this.props);
+    // console.log('login form component state', 'state:', this.state, "props:", this.props);
     return(
-      <div className="loginForm">
-        <h1>I am the Login Form</h1>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Email:
-            <input type="text" name="email" onChange={this.handleChange} value={this.state.email}/>
-          </label>
-          <label>
-            Password:
-            <input type="password" name="password" onChange={this.handleChange} value={this.state.password}/>
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+      <div>
+        <div className="loginForm">
+          <div className='login-title'>
+            <span>Login to the Garden Party</span>
+          </div>
+          <form onSubmit={this.handleSubmit}>
+              <div className='login-input'>
+              <input type="text" name="email"  placeholder='Email' onChange={this.handleChange} value={this.state.email}/>
+              <input type="password" name="password"  placeholder='Password' onChange={this.handleChange} value={this.state.password}/>
+              </div>
+            // <input type="submit" value="Login" className='login-submit'/>
+          </form>
+        </div>
+        <div className='bottombox'>
+        <NavLink to="/signup" activeClassName="active" className='signup-link' id="navlink">New to Garden Party? Signup now</NavLink>
+        </div>
       </div>
     )
   }

@@ -11,10 +11,18 @@ const Profile = () => {
   return(
     <div className="profile">
       <Header />
-      <h1>I am the Profile Page</h1>
-      <UserInfo />
-      <EditUser />
-      <UserPlants />
+      <div className='topbox'>
+        <div className='inner-profile'>
+          <div className='user-info'>
+            <div className='default-pic'></div>
+            <UserInfo />
+            <EditUser />
+          </div>
+          <div className='plant-info'>
+            <UserPlants />
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   )

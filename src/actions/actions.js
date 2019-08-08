@@ -35,6 +35,7 @@ function loginUser(userInfo){
      })
     .then(res => res.json())
     .then(data => {
+      console.log('data back from server', data);
       localStorage.setItem('token', data.jwt)
       dispatch({type: "LOGIN", payload: data.user})
     })

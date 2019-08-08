@@ -13,8 +13,7 @@ class EditUser extends Component {
     console.log('edit user render', this.props);
     return(
       <div className="editUser">
-        <h1>Do you want to edit your profile? </h1>
-        <button onClick={this.editUser}>click me to edit (all I do is console.log)</button>
+        <button className="edit-user-btn" onClick={this.editUser}>click me to edit</button>
         <EditUserForm />
       </div>
     )

@@ -1,13 +1,27 @@
-# GARDEN PARTY
-Frontend developed by Gabbie Piraino; project developed with Steven Balasta, Ian Hollander, and Vishal Patel
+# GARDEN PI
+Frontend developed by [Gabbie Piraino](https://github.com/pirainogi); project developed with [Steven Balasta](https://github.com/sbal13), [Ian Hollander](https://github.com/ihollander), and [Vishal Patel](https://github.com/vishalpatel2890)
 
 ** Work in Progress **
 
 ## Built With
-- Ruby on Rails
-- React.js
-- Javascript
-- HTML5 and CSS3
+* Python
+* Ruby
+* Javascript
+
+* AWS DynamoDB
+* AWS Lambda
+* Rails
+* React
+* HTML5
+* CSS3
+
+Please find the Rails database at [Garden-Pi-API](https://github.com/garden-pi/garden-pi-api). **You will need to create an API key with the Trefle API in order to seed your data.**
+
+Please find the Lambda package at [Garden-Pi-Lambda](https://github.com/garden-pi/garden-pi-lambda)
+
+Please find the Pi package at [Garden-Pi-Device](https://github.com/garden-pi/garden-pi-device)
+
+Please find the AWS IOT at [Garden-Pi-IOT](https://github.com/garden-pi/garden-pi-aws-iot)
 
 ## Prerequisites
 
@@ -51,6 +65,8 @@ App
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Hamburger Icon created by [Icons8](https://icons8.com/icon/12371/menu")
 
 ## Available Scripts
 

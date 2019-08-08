@@ -1,13 +1,29 @@
 import React from 'react';
 import HealthMeter from '../components/healthMeter';
 import ToDo from './todo';
+import '../css/currentPlantView.css'
 
 const CurrentPlantView = () => {
 
   return(
-    <div>
-      <h1>This is where information about a clicked plant will live and provide plant health information hurray</h1>
-      <HealthMeter/>
+    <div className="currentPlantView">
+      <div className='upper-plant-view'>
+        <div className='left-plant-view'>
+          <div className='plant-basics'>
+            <p>plant name</p>
+            <div className='plant-pic'></div>
+          </div>
+          <div>
+            <p>family info here</p>
+            <p>age of plant</p>
+            <HealthMeter/>
+          </div>
+        </div>
+        <div>
+          <p>group name</p>
+          <button>remove plant</button>
+        </div>
+      </div>
       <ToDo/>
     </div>
   )

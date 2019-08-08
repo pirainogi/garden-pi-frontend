@@ -1,10 +1,11 @@
 import React from 'react';
+import '../css/healthMeter.css'
 
 const HealthMeter = () => {
 
   return(
-    <div>
-      <h2> I will one day be a health meter here much wow </h2>
+    <div className="healthMeter">
+      <h2>health meter</h2>
     </div>
   )
 }

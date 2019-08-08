@@ -30,10 +30,10 @@ class Home extends Component {
   render(){
     return(
       <div>
-        <div className="container">
+        <div className="home-container">
           <div className="tophalf">
 
-            <form onSubmit={this.handleSubmit} className="loginForm">
+            <form onSubmit={this.handleSubmit}>
               <input type="email" name="email" onChange={this.handleChange} value={this.state.email} placeholder="Email"/>
               <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password"/>
               <input type="submit" value="Login" className="button"/>
@@ -44,8 +44,10 @@ class Home extends Component {
             <h3> TAGLINE TAGLINE TAGLINE </h3>
           </div>
           <div className="bottomhalf">
-            <NavLink to="/login" activeClassName="active" id="navlink">Login</NavLink>
-            <NavLink to="/signup" activeClassName="active" id="navlink">Signup</NavLink>
+            <div className='link-row'>
+              <NavLink to="/login" activeClassName="active" id="navlink" className='home-links'>Login</NavLink>
+              <NavLink to="/signup" activeClassName="active" className='home-links' id="navlink">Signup</NavLink>
+            </div>
           </div>
         </div>
         <Footer />
