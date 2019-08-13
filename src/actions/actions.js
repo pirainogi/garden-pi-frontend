@@ -11,7 +11,6 @@ function autoLogin(){
       })
       .then(res => res.json())
       .then(data => {
-        console.log('after fetch', data);
         dispatch({type: "AUTOLOGIN", payload: data.user})
       })
     }
