@@ -19,9 +19,9 @@ class App extends Component {
   }
 
   componentDidUpdate(){
-    if(!!this.props.state.currentUser && window.location.pathname === '/' || window.location.pathname === '/login' || window.location.pathname === '/signup'){
-      this.props.history.push('/profile')
-    }
+    // if(!!this.props.state.currentUser && window.location.pathname === '/' || window.location.pathname === '/login' || window.location.pathname === '/signup'){
+    //   this.props.history.push('/profile')
+    // }
   }
 
   render(){
