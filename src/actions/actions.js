@@ -11,7 +11,6 @@ function autoLogin(){
       })
       .then(res => res.json())
       .then(data => {
-        console.log('after fetch', data);
         dispatch({type: "AUTOLOGIN", payload: data.user})
       })
     }
@@ -70,7 +69,23 @@ function logoutUser(){
 
 function editUser(userInfo){
   return dispatch => {
-
+    fetch('http://localhost:3000/api/v1/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: userInfo.name,
+        email: userInfo.email,
+        password: userInfo.password,
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      dispatch({type: "EDITUSER", payload: data.user})
+    })
   }
 }
 

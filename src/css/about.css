@@ -5,10 +5,6 @@
   padding-right: 4vh;
 }
 
-.about {
-
-}
-
 .about-content {
   border-style: solid;
   border-width: 3px;
@@ -17,10 +13,12 @@
   height: 70vh;
 }
 
-.about-content h1 {
+.about-content p {
   margin-left: 4vh;
   margin-right: 4vh;
   text-align: justify;
+  font-size: 4vw;
+  font-weight: bold;
 }
 
 .about-logo {

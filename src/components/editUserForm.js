@@ -9,6 +9,7 @@ class EditUserForm extends Component {
   state = {
     name: '',
     email: '',
+    password: '',
   }
 
   handleChange = (e) => {
@@ -20,11 +21,7 @@ class EditUserForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     console.log('sending the edit user fetch');
-    if(this.state.password === this.state.new_password){
-      this.props.signupUser(this.state)
-    } else {
-      alert(`Your new passwords don't match! Try again.`)
-    }
+    this.props.editUser(this.state)
   }
 
   render(){
@@ -35,6 +32,7 @@ class EditUserForm extends Component {
         <form onSubmit={this.handleSubmit}>
             <input type="text" name="name" placeholder="New Name" onChange={this.handleChange} value={this.state.name}/>
             <input type="text" name="email" placeholder="New Email" onChange={this.handleChange} value={this.state.email}/>
+            <input type="password" name="password" placeholder="Confirm Password" onChange={this.handleChange} value={this.state.password}/>
           <input type="submit" value="Submit" />
         </form>
       </div>
