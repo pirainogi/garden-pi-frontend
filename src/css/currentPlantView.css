@@ -1,21 +1,28 @@
 .currentPlantView {
   border-style: solid;
   border-width: 3px;
-  border-color: plum;
-  margin-right: 1.
+  border-color: yellow;
+  margin-top: 2vh;
+  margin-right: 1;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .upper-plant-view {
   border-style: solid;
   border-width: 3px;
-  border-color: black;
-  height: 30vh;
+  border-color: red;
+  width: 98vw;
+  display: flex;
+  flex-direction: row;
 }
 
 .left-plant-view {
   border-style: solid;
   border-width: 3px;
   border-color: brown;
+  width: auto;
 }
 
 .plant-basics {
