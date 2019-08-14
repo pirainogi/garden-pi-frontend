@@ -13,7 +13,7 @@ const CurrentPlantView = () => {
             <p>plant name</p>
             <div className='plant-pic'></div>
           </div>
-          <div>
+          <div className='plant-health'>
             <p>family info here</p>
             <p>age of plant</p>
             <HealthMeter/>
