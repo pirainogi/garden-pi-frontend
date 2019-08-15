@@ -1,7 +1,7 @@
 .todo {
-  border-style: solid;
+  /* border-style: solid;
   border-width: 3px;
-  border-color: navy;
+  border-color: navy; */
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   grid-template-rows: auto;
@@ -10,5 +10,5 @@
   height: 35vh;
   padding-left: 1.8vh;
   padding-right: 1.8vh;
-  margin-top: 2vh;
+  margin-top: 6vh;
 }

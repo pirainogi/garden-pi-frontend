@@ -19,7 +19,7 @@ const CurrentPlantView = () => {
             <HealthMeter/>
           </div>
         </div>
-        <div>
+        <div className='right-plant-view'>
           <p className='garden-group-name'>group name</p>
           <button className='remove-plant-btn'>remove plant</button>
         </div>
