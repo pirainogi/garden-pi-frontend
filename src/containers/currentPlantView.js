@@ -13,15 +13,15 @@ const CurrentPlantView = () => {
             <p>plant name</p>
             <div className='plant-pic'></div>
           </div>
-          <div>
+          <div className='plant-health'>
             <p>family info here</p>
             <p>age of plant</p>
             <HealthMeter/>
           </div>
         </div>
         <div>
-          <p>group name</p>
-          <button>remove plant</button>
+          <p className='garden-group-name'>group name</p>
+          <button className='remove-plant-btn'>remove plant</button>
         </div>
       </div>
       <ToDo/>
