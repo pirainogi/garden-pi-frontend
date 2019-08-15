@@ -27,6 +27,17 @@
   flex-direction: row;
 }
 
+.right-plant-view {
+  border-style: solid;
+  border-width: 3px;
+  border-color: aqua;
+  width: 40vw;
+  position: absolute;
+  right: 3.5vw;
+  margin-top: 1vw;
+  text-align: center;
+}
+
 .plant-basics {
   border-style: solid;
   border-width: 3px;
@@ -55,6 +66,7 @@
   border-radius: 20px;
   border-color: rgb(150, 171, 108);
   border-style: solid;
+  border-width: 3px;
   padding-top: 1vh;
   padding-left: 4vh;
   padding-right: 4vh;
@@ -62,13 +74,14 @@
   /* color: rgb(150, 171, 108); */
   text-decoration: none;
   font-size: 2vw;
+  width: 25vw;
+  text-align: center;
+  display: inline-block;
 }
 
 .remove-plant-btn {
   background-color: rgb(150, 171, 108);
   border-radius: 20px;
-  /* border-color: rgb(150, 171, 108);
-  border-style: solid; */
   padding-top: 1vh;
   padding-left: 4vh;
   padding-right: 4vh;
@@ -76,4 +89,7 @@
   color: white;
   text-decoration: none;
   font-size: 2vw;
+  width: 25vw;
+  text-align: center;
+  display: inline-block;
 }
