@@ -20,8 +20,8 @@ const CurrentPlantView = () => {
           </div>
         </div>
         <div>
-          <p>group name</p>
-          <button>remove plant</button>
+          <p className='garden-group-name'>group name</p>
+          <button className='remove-plant-btn'>remove plant</button>
         </div>
       </div>
       <ToDo/>
