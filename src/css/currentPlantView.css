@@ -1,28 +1,29 @@
 .currentPlantView {
-  /* border-style: solid;
+  border-style: solid;
   border-width: 3px;
-  border-color: yellow; */
-  margin-top: 2vh;
-  margin-right: 1;
-  /* height: 30vh; */
+  border-color: rgb(150, 171, 108);
+  border-radius: 20px;
+  margin-top: 4vh;
+  margin-right: 2.5vh;
+  margin-left: 2.5vh;
   display: flex;
   flex-direction: column;
 }
 
 .upper-plant-view {
-  border-style: solid;
+  /* border-style: solid;
   border-width: 3px;
-  border-color: red;
-  width: 98vw;
+  border-color: red; */
+  width: auto;
   display: flex;
   flex-direction: row;
 }
 
 .left-plant-view {
-  border-style: solid;
+  /* border-style: solid;
   border-width: 3px;
-  border-color: brown;
-  width: auto;
+  border-color: brown; */
+  width: 48vw;
   display: flex;
   flex-direction: row;
 }
@@ -33,32 +34,35 @@
   border-color: aqua; */
   width: 40vw;
   position: absolute;
-  right: 3.5vw;
-  margin-top: 1vw;
+  right: 7vw;
+  margin-top: 1vh;
   text-align: center;
 }
 
 .plant-basics {
-  border-style: solid;
+  /* border-style: solid;
   border-width: 3px;
-  border-color: teal;
+  border-color: teal; */
   position: relative;
-  margin-left:
+  margin-top: 1vh;
+  margin-left: 4vw;
+  width: auto;
 }
 
 .plant-pic {
-  height: 11vh;
-  width: 11vh;
+  height: 13vh;
+  width: 13vh;
   background-color: rgb(150, 171, 108);
   border-radius: 20px;
 }
 
 .plant-health {
-  border-style: solid;
+  /* border-style: solid;
   border-width: 3px;
-  border-color: pink;
+  border-color: pink; */
   position: relative;
-  margin-left:
+  margin-top: 1vh;
+  right: -8vw;
 }
 
 .garden-group-name {
