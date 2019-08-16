@@ -16,6 +16,7 @@ class App extends Component {
   componentDidMount(){
     console.log('hitting the component did mount');
     this.props.autoLogin()
+    this.props.grabActions()
   }
 
   componentDidUpdate(){
