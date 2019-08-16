@@ -13,7 +13,7 @@ const ActionCard = () => {
 } // end of class
 
 const mapStateToProps = (state) => {
-  console.log('user info', state);
+  // console.log('user info', state);
   return {
     state
   }
