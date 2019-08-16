@@ -1,22 +1,25 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import '../css/actionCard.css'
 
-const ActionCard = () => {
-
+const ActionCard = (props) => {
+    console.log(props)
     return(
       <div className="actionCard">
-        <span>action card </span>
+        {props.action
+          ? <span>{props.action.action_type}</span>
+          : <span>action card </span>
+        }
       </div>
     )
 
 } // end of class
 
-const mapStateToProps = (state) => {
-  // console.log('user info', state);
-  return {
-    state
-  }
-}
+// const mapStateToProps = (state) => {
+//   // console.log('user info', state);
+//   return {
+//     state
+//   }
+// }
 
-export default connect(mapStateToProps)(ActionCard);
+export default ActionCard;

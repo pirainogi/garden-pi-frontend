@@ -6,7 +6,7 @@ import '../css/todo.css';
 class ToDo extends Component {
 
   renderActionCards = () => {
-    this.props.state.actions.map(action => {
+    return this.props.state.actions.map(action => {
       return (
         <ActionCard
           key={action.id}
@@ -21,8 +21,8 @@ class ToDo extends Component {
     return(
       <div className="todo">
         {this.props.state.actions
-          ? renderActionCards()
-          : <ActionCard />
+          ? this.renderActionCards()
+          : <div>
             <ActionCard />
             <ActionCard />
             <ActionCard />
@@ -32,6 +32,8 @@ class ToDo extends Component {
             <ActionCard />
             <ActionCard />
             <ActionCard />
+            <ActionCard />
+          </div>
         }
       </div>
     )
