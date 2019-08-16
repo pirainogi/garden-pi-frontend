@@ -15,11 +15,4 @@ const ActionCard = (props) => {
 
 } // end of class
 
-// const mapStateToProps = (state) => {
-//   // console.log('user info', state);
-//   return {
-//     state
-//   }
-// }
-
 export default ActionCard;
