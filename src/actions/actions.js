@@ -83,26 +83,37 @@ function editUser(userInfo){
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       dispatch({type: "EDITUSER", payload: data.user})
     })
   }
 }
 
-function editPassword(password){
+function grabActions(){
   return dispatch => {
-    fetch('http://localhost:3000/api/v1/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        password: password,
-      })
+    fetch('http://localhost:3000/api/v1/actions')
+    .then(res => res.json())
+    .then(data => {
+      // console.log(data);
+      dispatch({type: "ACTIONS", payload: data})
     })
   }
 }
+
+// function editPassword(password){
+//   return dispatch => {
+//     fetch('http://localhost:3000/api/v1/users', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'Accept': 'application/json'
+//       },
+//       body: JSON.stringify({
+//         password: password,
+//       })
+//     })
+//   }
+// }
 
 export {
   autoLogin,
@@ -110,5 +121,6 @@ export {
   signupUser,
   logoutUser,
   editUser,
-  editPassword,
+  // editPassword,
+  grabActions,
 };

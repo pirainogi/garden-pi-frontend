@@ -19,7 +19,21 @@ class UserPlants extends Component {
         <div className='create-plant-row'>
           <button className='create-plant-btn' onClick={this.createPlant}>Create New Plant</button>
         </div>
+        <div className='plant-card-container'>
         <PlantCard />
+        <PlantCard />
+        <PlantCard />
+        <PlantCard />
+        <PlantCard />
+        <PlantCard />
+        <PlantCard />
+        <PlantCard />
+        <PlantCard />
+        <PlantCard />
+        <PlantCard />
+        <PlantCard />
+        <PlantCard />
+        </div>
       </div>
     )
   }
