@@ -9,6 +9,10 @@ class UserPlants extends Component {
     console.log('clicking the create plant button');
   }
 
+  renderPlants = () => {
+    console.log('gonna make some plant cards', this.props.user.groups);
+  }
+
   render(){
     // console.log('user info render', this.props);
     return(
