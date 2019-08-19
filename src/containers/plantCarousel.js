@@ -23,7 +23,7 @@ const PlantCarousel = (props) => {
     }
   }
 
-  console.log(props);
+  // console.log(props);
 
   return(
     <div className="plantCarousel">
