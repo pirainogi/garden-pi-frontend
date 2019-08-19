@@ -1,27 +1,35 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PlantCard from '../components/plantCard'
 import '../css/plantCarousel.css'
 
-const PlantCarousel = () => {
+const PlantCarousel = (props) => {
+
+  function renderPlants(){
+    if (props.state.currentUser) {
+      return props.state.currentUser.groups.map(group => {
+        return group.plants.map(plant => {
+          // console.log(plant);
+          return <PlantCard key={plant.id} plant={plant}/>
+        })
+      })
+    }
+  }
+
+  console.log(props);
 
   return(
     <div className="plantCarousel">
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
-      <PlantCard />
+      {renderPlants()}
     </div>
   )
 }
 
-export default PlantCarousel;
+const mapStateToProps = (state) => {
+  // console.log(`user's plants`, state);
+  return {
+    state
+  }
+}
+
+export default connect(mapStateToProps)(PlantCarousel);

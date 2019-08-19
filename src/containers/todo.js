@@ -17,7 +17,7 @@ class ToDo extends Component {
   }
 
   render(){
-    console.log('going to make some action cards', this.props.state.actions);
+    // console.log('going to make some action cards', this.props.state.actions);
     return(
       <div>
       <div className="todo">
