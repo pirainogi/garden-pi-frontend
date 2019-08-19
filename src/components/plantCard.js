@@ -5,7 +5,13 @@ const PlantCard = (props) => {
   console.log(props);
     return(
       <div className="plantCard">
-        <span>Plant Name</span>
+        {props
+          ? <div>
+            <span>{props.plant.name}</span><br></br>
+            <span>Species:{props.plant.species_id}</span>
+          </div>
+          : <span>Plant Card</span>
+        }
       </div>
     )
 
