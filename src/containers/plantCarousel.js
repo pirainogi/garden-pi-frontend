@@ -15,8 +15,8 @@ const PlantCarousel = (props) => {
       })
     }
   }
-
-  console.log(props);
+  
+  // console.log(props);
 
   return(
     <div className="plantCarousel">
@@ -26,7 +26,6 @@ const PlantCarousel = (props) => {
 }
 
 const mapStateToProps = (state) => {
-  // console.log(`user's plants`, state);
   return {
     state
   }

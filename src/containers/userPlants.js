@@ -21,7 +21,7 @@ class UserPlants extends Component {
   }
 
   render(){
-    console.log('user info render', this.props.state.currentUser);
+    // console.log('user info render', this.props.state.currentUser);
     return(
       <div className="userPlants">
         <div className='user-plant-title'>
