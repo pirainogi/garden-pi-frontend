@@ -23,13 +23,14 @@ class PlantCard extends Component {
   }
 
   render(){
+    // console.log(this.props);
     return(
-      <div className="plantCard">
+      <div className="plantCard" onClick={() => this.props.renderCurrentPlantView(this.props.plant)}>
         {this.props.plant
           ? <div>
-            <span className='plantName'>{this.props.plant.name}</span><br></br>
-            <span>Species: {this.state.species}</span><br></br>
             <FontAwesomeIcon icon={faLeaf} size='1x' color={'rgb(150, 171, 108)'}/>
+            <span className='plantName'> {this.props.plant.name}</span><br></br>
+            <span>Species: {this.state.species}</span><br></br>
           </div>
           : <span>Plant Card</span>
         }

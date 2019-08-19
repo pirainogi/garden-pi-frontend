@@ -17,24 +17,12 @@ class ToDo extends Component {
   }
 
   render(){
-    // console.log('going to make some action cards', this.props.state.actions);
     return(
       <div>
       <div className="todo">
         {this.props.state.actions
           ? this.renderActionCards()
-          : <div>
-            <ActionCard />
-            <ActionCard />
-            <ActionCard />
-            <ActionCard />
-            <ActionCard />
-            <ActionCard />
-            <ActionCard />
-            <ActionCard />
-            <ActionCard />
-            <ActionCard />
-          </div>
+          : null
         }
       </div>
       </div>
