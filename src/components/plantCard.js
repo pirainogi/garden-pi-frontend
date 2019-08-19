@@ -23,8 +23,9 @@ class PlantCard extends Component {
   }
 
   render(){
+    console.log(this.props);
     return(
-      <div className="plantCard">
+      <div className="plantCard" onClick={this.props.renderCurrentPlantView}>
         {this.props.plant
           ? <div>
             <FontAwesomeIcon icon={faLeaf} size='1x' color={'rgb(150, 171, 108)'}/>

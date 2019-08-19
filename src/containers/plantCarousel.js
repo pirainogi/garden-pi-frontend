@@ -5,17 +5,22 @@ import '../css/plantCarousel.css'
 
 const PlantCarousel = (props) => {
 
+  function renderCurrentPlantView(){
+    console.log('gonna make a plant show up');
+  }
+
   function renderPlants(){
     if (props.state.currentUser) {
       return props.state.currentUser.groups.map(group => {
         return group.plants.map(plant => {
           // console.log(plant);
-          return <PlantCard key={plant.id} plant={plant}/>
+          return <PlantCard key={plant.id} plant={plant}
+          renderCurrentPlantView={renderCurrentPlantView}/>
         })
       })
     }
   }
-  
+
   // console.log(props);
 
   return(
