@@ -1,9 +1,8 @@
 import React from 'react';
-// import { connect } from 'react-redux';
 import '../css/actionCard.css'
 
 const ActionCard = (props) => {
-    // console.log(props)
+
     return(
       <div className="actionCard">
         {props.action

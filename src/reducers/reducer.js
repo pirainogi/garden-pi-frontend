@@ -6,7 +6,6 @@ const defaultState = {
 }
 
 function reducer(state = defaultState, action){
-  // console.log('test reducer', action);
   switch(action.type) {
 
     case 'SIGNUP':
@@ -23,7 +22,7 @@ function reducer(state = defaultState, action){
 
     case 'EDITUSER':
       return {...state, currentUser: action.payload}
-      
+
     case 'ACTIONS':
       return {...state, actions: action.payload}
 
