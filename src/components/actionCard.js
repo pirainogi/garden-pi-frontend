@@ -3,7 +3,7 @@ import React from 'react';
 import '../css/actionCard.css'
 
 const ActionCard = (props) => {
-    console.log(props)
+    // console.log(props)
     return(
       <div className="actionCard">
         {props.action

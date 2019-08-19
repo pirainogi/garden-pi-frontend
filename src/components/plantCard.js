@@ -2,10 +2,10 @@ import React from 'react';
 import '../css/plantCard.css';
 
 const PlantCard = (props) => {
-  console.log(props);
+  // console.log(props);
     return(
       <div className="plantCard">
-        {props
+        {props.plant
           ? <div>
             <span>{props.plant.name}</span><br></br>
             <span>Species:{props.plant.species_id}</span>
