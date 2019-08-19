@@ -27,9 +27,9 @@ class PlantCard extends Component {
       <div className="plantCard">
         {this.props.plant
           ? <div>
-            <span className='plantName'>{this.props.plant.name}</span><br></br>
-            <span>Species: {this.state.species}</span><br></br>
             <FontAwesomeIcon icon={faLeaf} size='1x' color={'rgb(150, 171, 108)'}/>
+            <span className='plantName'> {this.props.plant.name}</span><br></br>
+            <span>Species: {this.state.species}</span><br></br>
           </div>
           : <span>Plant Card</span>
         }
