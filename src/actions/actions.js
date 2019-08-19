@@ -100,6 +100,12 @@ function grabActions(){
   }
 }
 
+function setCurrentPlant(plant){
+  return dispatch => {
+    dispatch({type: 'CURRENTPLANT', payload: plant})
+  }
+}
+
 // function editPassword(password){
 //   return dispatch => {
 //     fetch('http://localhost:3000/api/v1/users', {

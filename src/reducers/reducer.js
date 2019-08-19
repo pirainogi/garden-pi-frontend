@@ -1,6 +1,6 @@
 const defaultState = {
   currentUser: null,
-  currentPlants: null,
+  currentPlant: null,
   actions: null,
   currentModal: null,
 }
@@ -25,6 +25,9 @@ function reducer(state = defaultState, action){
 
     case 'ACTIONS':
       return {...state, actions: action.payload}
+
+    case 'CURRENTPLANT':
+      return {...state, currentPlant: action.payload}
 
     default:
       return state
