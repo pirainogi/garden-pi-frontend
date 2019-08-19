@@ -10,11 +10,18 @@ class UserPlants extends Component {
   }
 
   renderPlants = () => {
-    console.log('gonna make some plant cards', this.props.user.groups);
+    if (this.props.state.currentUser) {
+      return this.props.state.currentUser.groups.map(group => {
+        return group.plants.map(plant => {
+          // console.log(plant);
+          return <PlantCard key={plant.id} plant={plant}/>
+        })
+      })
+    }
   }
 
   render(){
-    // console.log('user info render', this.props);
+    console.log('user info render', this.props.state.currentUser);
     return(
       <div className="userPlants">
         <div className='user-plant-title'>
@@ -24,19 +31,7 @@ class UserPlants extends Component {
           <button className='create-plant-btn' onClick={this.createPlant}>Create New Plant</button>
         </div>
         <div className='plant-card-container'>
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
+        {this.renderPlants()}
         </div>
       </div>
     )
