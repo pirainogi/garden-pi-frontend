@@ -1,5 +1,6 @@
 const defaultState = {
   currentUser: null,
+  currentPlants: null,
   actions: null,
   currentModal: null,
 }
@@ -22,7 +23,7 @@ function reducer(state = defaultState, action){
 
     case 'EDITUSER':
       return {...state, currentUser: action.payload}
-
+      
     case 'ACTIONS':
       return {...state, actions: action.payload}
 

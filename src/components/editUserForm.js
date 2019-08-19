@@ -20,12 +20,12 @@ class EditUserForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log('sending the edit user fetch');
+    // console.log('sending the edit user fetch');
     this.props.editUser(this.state)
   }
 
   render(){
-    console.log('edit user', 'state:', this.state, "props:", this.props);
+    // console.log('edit user', 'state:', this.state, "props:", this.props);
     return(
       <div className="editUserForm">
         <h1>I am the Edit User Form (I do nootthinnggggg)</h1>

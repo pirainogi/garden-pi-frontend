@@ -14,19 +14,19 @@ import About from './components/about'
 class App extends Component {
 
   componentDidMount(){
-    console.log('hitting the component did mount');
+    // console.log('hitting the component did mount');
     this.props.autoLogin()
     this.props.grabActions()
   }
 
-  componentDidUpdate(){
-    // if(!!this.props.state.currentUser && window.location.pathname === '/' || window.location.pathname === '/login' || window.location.pathname === '/signup'){
-    //   this.props.history.push('/profile')
-    // }
-  }
+  // componentDidUpdate(){
+  //   // if(!!this.props.state.currentUser && window.location.pathname === '/' || window.location.pathname === '/login' || window.location.pathname === '/signup'){
+  //   //   this.props.history.push('/profile')
+  //   // }
+  // }
 
   render(){
-    console.log('app', this.props);
+    // console.log('app', this.props);
     return (
       <div>
         <Switch>

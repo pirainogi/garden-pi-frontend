@@ -26,7 +26,7 @@ class EditPasswordForm extends Component {
   }
 
   render(){
-    console.log('edit user', 'state:', this.state, "props:", this.props);
+    // console.log('edit user', 'state:', this.state, "props:", this.props);
     return(
       <div className="editUserForm">
         <h1>Edit PW Form (I also do nootthinnggggg)</h1>

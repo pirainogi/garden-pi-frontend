@@ -1,9 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import '../css/plantCard.css';
 
-const PlantCard = () => {
-
+const PlantCard = (props) => {
+  console.log(props);
     return(
       <div className="plantCard">
         <span>Plant Name</span>
@@ -12,11 +11,4 @@ const PlantCard = () => {
 
 } // end of class
 
-const mapStateToProps = (state) => {
-  // console.log('user info', state);
-  return {
-    state
-  }
-}
-
-export default connect(mapStateToProps)(PlantCard);
+export default PlantCard;
