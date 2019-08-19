@@ -129,4 +129,5 @@ export {
   editUser,
   // editPassword,
   grabActions,
+  setCurrentPlant,
 };

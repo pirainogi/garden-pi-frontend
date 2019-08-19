@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import * as actions from '../actions/actions'
 import PlantCard from '../components/plantCard'
 import '../css/plantCarousel.css'
 
 const PlantCarousel = (props) => {
 
-  function renderCurrentPlantView(){
-    console.log('gonna make a plant show up');
+  function renderCurrentPlantView(plant){
+    // console.log('gonna make a plant show up');
+    props.setCurrentPlant(plant)
   }
 
   function renderPlants(){
@@ -21,7 +23,7 @@ const PlantCarousel = (props) => {
     }
   }
 
-  // console.log(props);
+  console.log(props);
 
   return(
     <div className="plantCarousel">
@@ -36,4 +38,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(PlantCarousel);
+export default connect(mapStateToProps, actions)(PlantCarousel);
