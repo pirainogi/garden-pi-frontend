@@ -13,7 +13,7 @@ const CurrentPlantView = (props) => {
         <div className='left-plant-view'>
           <div className='plant-basics'>
             {props.state.currentPlant
-              ? <span>{props.state.currentPlant.name}</span>
+              ? <p>{props.state.currentPlant.name}</p>
               : <p>plant name</p>
             }
             <div className='plant-pic'></div>
@@ -36,7 +36,6 @@ const CurrentPlantView = (props) => {
 }
 
 const mapStateToProps = (state) => {
-  // console.log('user info', state);
   return {
     state
   }

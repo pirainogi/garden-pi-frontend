@@ -1,7 +1,7 @@
 function autoLogin(){
   return dispatch => {
     const token = localStorage.getItem('token')
-    console.log('in autologin', token);
+    // console.log('in autologin', token);
     if (token){
       fetch('http://localhost:3000/api/v1/auto_login', {
         method: 'GET',
@@ -106,6 +106,12 @@ function setCurrentPlant(plant){
   }
 }
 
+function toggleModal(){
+  return dispatch => {
+    dispatch({type: 'TOGGLEMODAL'})
+  }
+}
+
 // function editPassword(password){
 //   return dispatch => {
 //     fetch('http://localhost:3000/api/v1/users', {
@@ -130,4 +136,5 @@ export {
   // editPassword,
   grabActions,
   setCurrentPlant,
+  toggleModal,
 };
