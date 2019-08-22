@@ -12,7 +12,7 @@ class Test extends Component {
   }
 
   render(){
-    console.log(this.props);
+    // console.log(this.props);
     const modal = this.props.state.currentModal
     ? (
       <Modal>
@@ -35,7 +35,7 @@ class Test extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('test modal', state);
+  // console.log('test modal', state);
   return {
     state
   }

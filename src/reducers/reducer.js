@@ -31,7 +31,7 @@ function reducer(state = defaultState, action){
       return {...state, currentPlant: action.payload}
 
     case 'TOGGLEMODAL':
-      return {...state, currentModal: !state.currentModal}
+      return {...state, showModal: !state.showModal}
 
     default:
       return state
