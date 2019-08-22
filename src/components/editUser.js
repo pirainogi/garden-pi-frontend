@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions/actions'
-import EditUserForm from '../components/editUserForm';
+import * as actions from '../actions/actions';
 import Modal from './modal';
+import EditUserForm from '../components/editUserForm';
 import '../css/modal.css'
 // import EditPasswordForm from '../components/editPasswordForm';
 
@@ -13,26 +13,21 @@ class EditUser extends Component {
   openCloseModal = () => {
     console.log('clicking btn');
     this.props.toggleModal()
+    // console.log('modal status:', this.props.state.showModal);
   }
 
-  // editUser = () => {
-  //   console.log('click clack edit a user');
-  // }
-  //
-  // editPassword = () => {
-  //   console.log('click clack edit pw');
-  // }
-
   render(){
-    // console.log('edit user render', this.props.state.showModal);
+    console.log('edit user render', this.props.state.showModal);
     const modal = this.props.state.showModal
     ? (
       <Modal>
         <div id="outer-modal">
           <div className="inner-modal">
-          <div className="modal-content">
-          <EditUser />
-          <button onClick={this.openCloseModal}>hide</button></div></div>
+            <div className="modal-content">
+            <EditUserForm />
+            <button onClick={this.openCloseModal}>hide </button>
+            </div>
+          </div>
         </div>
       </Modal>
     )
