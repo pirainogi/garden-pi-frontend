@@ -1,0 +1,26 @@
+#outer-modal {
+  position: relative;
+  z-index: 999;
+}
+
+.inner-modal {
+  background-color: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-style: solid;
+  border-width: 3px;
+  border-color: mediumseagreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  border-style: solid;
+  border-width: 3px;
+  border-color: purple;
+  background-color: white;
+}
