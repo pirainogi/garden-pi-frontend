@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 import Modal from './modal';
 import EditUserForm from '../components/editUserForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import '../css/modal.css'
 import '../css/editUser.css'
 
@@ -21,6 +23,7 @@ class EditUser extends Component {
         <div id="outer-modal">
           <div className="inner-modal">
             <div className="modal-content">
+            <button onClick={this.openCloseModal}><FontAwesomeIcon icon={faTimes} size='1x' color={'rgb(150, 171, 108)'}/></button>
             <EditUserForm />
             </div>
           </div>
