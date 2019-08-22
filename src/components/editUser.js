@@ -4,8 +4,6 @@ import * as actions from '../actions/actions';
 import Modal from './modal';
 import EditUserForm from '../components/editUserForm';
 import '../css/modal.css'
-// import EditPasswordForm from '../components/editPasswordForm';
-
 import '../css/editUser.css'
 
 class EditUser extends Component {
@@ -13,11 +11,10 @@ class EditUser extends Component {
   openCloseModal = () => {
     console.log('clicking btn');
     this.props.toggleModal()
-    // console.log('modal status:', this.props.state.showModal);
   }
 
   render(){
-    console.log('edit user render', this.props.state.showModal);
+    console.log('edit user render', this.props.state);
     const modal = this.props.state.showModal
     ? (
       <Modal>
@@ -25,7 +22,6 @@ class EditUser extends Component {
           <div className="inner-modal">
             <div className="modal-content">
             <EditUserForm />
-            <button onClick={this.openCloseModal}>hide </button>
             </div>
           </div>
         </div>
