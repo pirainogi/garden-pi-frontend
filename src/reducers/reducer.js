@@ -2,7 +2,8 @@ const defaultState = {
   currentUser: null,
   currentPlant: null,
   actions: null,
-  currentModal: false,
+  showModal: false,
+  currentModal: null,
 }
 
 function reducer(state = defaultState, action){
