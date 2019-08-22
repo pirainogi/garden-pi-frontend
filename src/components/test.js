@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import * as actions from '../actions/actions'
 // import ToggleModal from './toggleModal';
 import Modal from './modal';
+import '../css/modal.css'
 
 class Test extends Component {
   state = {
@@ -25,8 +26,10 @@ class Test extends Component {
     const modal = this.state.showModal
     ? (
       <Modal>
-        <div>
-          modal modal modal <button onClick={this.handleHide}>hide</button>
+        <div id="outer-modal">
+          <div className="inner-modal">
+          <div className="modal-content">
+          modal modal modal <button onClick={this.handleHide}>hide</button></div></div>
         </div>
       </Modal>
     )
