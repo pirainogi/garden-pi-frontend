@@ -1,63 +1,90 @@
 .header {
-  border-style: solid;
-  border-width: 3px;
-  border-color: rgb(150, 171, 108);
-  overflow: hidden;
+  background-color: #c7dd9b;
   position: fixed;
-  padding-left: 10px;
-  padding-top: 5px;
   top: 0;
   left: 0;
   right: 0;
-  height: 5vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  z-index: 1000;
 }
 
-.header * {
-  display: inline;
+.header .hamburger {
+  display: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
-.link {
-  margin: 20px;
-  color: #404040;
-  text-decoration: none;
-  display: inline-block;
+.header .hamburger div {
+  width: 2rem;
+  height: 3px;
+  background-color: #404040;
+  margin: 6px 0;
+  transition: transform .25s ease-in-out;
 }
 
-.active {
-  background-color: rgb(150, 171, 108);
-  color: white;
+.header.open .hamburger div:first-child {
+  transform: rotate(45deg) translate(2px, 6px);
 }
 
-.navWide {
+.header.open .hamburger div:nth-child(2) {
   display: none;
 }
 
-.navNarrow {
-  img {
-    float: left;
-    margin-left: 10px;
-  }
-  .narrowLinks {
-    display: none;
-
-    h4 {
-      display: block;
-      float: left;
-      clear: left;
-    }
-  }
+.header.open .hamburger div:last-child {
+  transform: rotate(-45deg) translate(0px, -4px);
 }
 
-@media (min-width: 480px){
-  header {
-    .navWide {
-      display: block;
-    }
-    .navNarrow {
-      display: none;
-    }
+.header .nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.header .nav-links :last-child {
+  margin-left: auto;
+}
+
+.header .nav-links .link {
+  padding: 0.75em 1em;
+  color: #404040;
+  text-decoration: none;
+}
+
+.header .nav-links .link.active {
+  background-color: #96ab6c;
+}
+
+.header .nav-links button.link {
+  border: none;
+  background: #677c40;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@media (max-width: 600px) {
+  .header .hamburger {
+    display: inline-block;
+  }
+
+  .header .nav-links  {
+    display: none;
+    flex-direction: column;
+  }
+
+  .header.open .nav-links {
+    display: flex;
+  }
+
+  .header.open .nav-links .link {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
