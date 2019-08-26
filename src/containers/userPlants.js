@@ -16,8 +16,8 @@ class UserPlants extends Component {
   // }
 
   openCloseModal = () => {
-    console.log('clicking btn');
-    this.props.toggleModal('CreatePlant')
+    // console.log('clicking btn');
+    this.props.toggleModal(this.props.state.showModal ? null : 'CreatePlant')
   }
 
   renderPlants = () => {

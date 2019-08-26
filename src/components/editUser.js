@@ -12,7 +12,7 @@ class EditUser extends Component {
 
   openCloseModal = () => {
     console.log('clicking btn');
-    this.props.toggleModal('EditUser')
+    this.props.toggleModal(this.props.state.showModal ? null : 'EditUser')
   }
 
   render(){
