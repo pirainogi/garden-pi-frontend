@@ -132,6 +132,29 @@ function deletePlant(plant){
   }
 }
 
+function createPlantLog(plantID, actionID){
+  const token = localStorage.getItem('token')
+  if(token){
+    fetch('http://localhost:3000/api/v1/logs', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        plant_id: this.props.state.currentPlant.id,
+        action_id: this.props.action.id,
+        amount: null,
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    })
+  }
+}
+
 // function editPassword(password){
 //   return dispatch => {
 //     fetch('http://localhost:3000/api/v1/users', {
