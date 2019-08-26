@@ -106,9 +106,10 @@ function setCurrentPlant(plant){
   }
 }
 
-function toggleModal(){
+function toggleModal(modalType){
+  console.log(modalType);
   return dispatch => {
-    dispatch({type: 'TOGGLEMODAL'})
+    dispatch({type: 'TOGGLEMODAL', payload: modalType})
   }
 }
 

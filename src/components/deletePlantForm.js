@@ -30,7 +30,7 @@ class DeletePlantForm extends Component {
     e.preventDefault()
     // console.log('sending the edit user fetch');
     // this.props.editUser(this.state)
-    this.props.toggleModal()
+    this.props.toggleModal(null)
   }
 
   render(){

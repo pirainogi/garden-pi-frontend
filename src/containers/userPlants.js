@@ -17,7 +17,7 @@ class UserPlants extends Component {
 
   openCloseModal = () => {
     console.log('clicking btn');
-    this.props.toggleModal()
+    this.props.toggleModal('CreatePlant')
   }
 
   renderPlants = () => {
@@ -33,7 +33,7 @@ class UserPlants extends Component {
 
   render(){
     // console.log('user info render', this.props.state.currentUser);
-    const modal = this.props.state.showModal
+    const modal = this.props.state.currentModal === 'CreatePlant'
     ? (
       <Modal>
         <div id="outer-modal">
