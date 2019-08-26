@@ -113,6 +113,10 @@ function toggleModal(modalType){
   }
 }
 
+function deletePlant(plantID){
+  console.log(plantID);
+}
+
 // function editPassword(password){
 //   return dispatch => {
 //     fetch('http://localhost:3000/api/v1/users', {

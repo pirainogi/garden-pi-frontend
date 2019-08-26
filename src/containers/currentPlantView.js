@@ -6,6 +6,10 @@ import '../css/currentPlantView.css'
 
 const CurrentPlantView = (props) => {
 
+  let deletePlant = () => {
+    console.log('will maybe delete a plant');
+  }
+
   console.log(props);
   return(
     <div className="currentPlantView">
@@ -26,7 +30,7 @@ const CurrentPlantView = (props) => {
         </div>
         <div className='right-plant-view'>
           <p className='garden-group-name'>group name</p>
-          <button className='remove-plant-btn'>remove plant</button>
+          <button className='remove-plant-btn' onClick={() => deletePlant()}>remove plant</button>
         </div>
       </div>
       <ToDo/>
