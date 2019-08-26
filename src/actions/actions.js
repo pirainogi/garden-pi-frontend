@@ -142,4 +142,5 @@ export {
   grabActions,
   setCurrentPlant,
   toggleModal,
+  deletePlant,
 };
