@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTint, faCut, faShoppingBasket, faSun, faCloud,    faPoop, faCannabis, faArchive, faSeedling, faTractor } from '@fortawesome/free-solid-svg-icons'
 import '../css/actionCard.css'
@@ -37,15 +38,37 @@ class ActionCard extends Component {
   }
 
   clickHandler = () => {
-    console.log(this.props.action.action_type);
+    // console.log(this.props.action.action_type);
     this.setState({
       color: 'rgb(0, 0, 0)'
     })
+    const token = localStorage.getItem('token')
+    if(token){
+      fetch('http://localhost:3000/api/v1/logs', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          plant_id: this.props.state.currentPlant.id,
+          action_id: this.props.action.id,
+          amount: null,
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+      })
+    }
+
+
     setTimeout(() => {
       this.setState({
         color: 'rgb(150, 171, 108)'
       })
-    }, 2000)
+    }, 1000)
   }
 
 
@@ -68,4 +91,10 @@ class ActionCard extends Component {
 
 } // end of class
 
-export default ActionCard;
+const mapStateToProps = (state) => {
+  return {
+    state
+  }
+}
+
+export default connect(mapStateToProps)(ActionCard);
