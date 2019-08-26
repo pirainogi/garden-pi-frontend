@@ -6,18 +6,7 @@ import '../css/editUserForm.css';
 class DeletePlantForm extends Component {
 
   state = {
-    groups: [],
-    species: [],
-    name: '',
-    species_id: '',
-    group_id: '',
-    humidity_min: '',
-    humidity_max: '',
-    ph_min: '',
-    ph_max: '',
-    soil_moisture_min: '',
-    soil_moisture_max: '',
-    temperature_min: ''
+    confirm: false,
   }
 
   handleChange = (e) => {
@@ -30,7 +19,7 @@ class DeletePlantForm extends Component {
     e.preventDefault()
     // console.log('sending the edit user fetch');
     // this.props.editUser(this.state)
-    this.props.toggleModal()
+    this.props.toggleModal(null)
   }
 
   render(){

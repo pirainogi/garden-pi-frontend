@@ -12,12 +12,12 @@ class EditUser extends Component {
 
   openCloseModal = () => {
     console.log('clicking btn');
-    this.props.toggleModal()
+    this.props.toggleModal(this.props.state.showModal ? null : 'EditUser')
   }
 
   render(){
-    console.log('edit user render', this.props.state);
-    const modal = this.props.state.showModal
+    // console.log('edit user render', this.props.state);
+    const modal = this.props.state.currentModal === 'EditUser'
     ? (
       <Modal>
         <div id="outer-modal">

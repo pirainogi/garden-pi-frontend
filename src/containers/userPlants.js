@@ -6,7 +6,7 @@ import PlantCard from '../components/plantCard';
 import CreatePlantForm from '../components/createPlantForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import '../css/modal.css'
+import '../css/modal.css';
 import '../css/userPlants.css';
 
 class UserPlants extends Component {
@@ -16,8 +16,8 @@ class UserPlants extends Component {
   // }
 
   openCloseModal = () => {
-    console.log('clicking btn');
-    this.props.toggleModal()
+    // console.log('clicking btn');
+    this.props.toggleModal(this.props.state.showModal ? null : 'CreatePlant')
   }
 
   renderPlants = () => {
@@ -33,7 +33,7 @@ class UserPlants extends Component {
 
   render(){
     // console.log('user info render', this.props.state.currentUser);
-    const modal = this.props.state.showModal
+    const modal = this.props.state.currentModal === 'CreatePlant'
     ? (
       <Modal>
         <div id="outer-modal">
