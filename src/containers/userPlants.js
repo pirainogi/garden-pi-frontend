@@ -6,7 +6,7 @@ import PlantCard from '../components/plantCard';
 import CreatePlantForm from '../components/createPlantForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import '../css/modal.css'
+import '../css/modal.css';
 import '../css/userPlants.css';
 
 class UserPlants extends Component {
