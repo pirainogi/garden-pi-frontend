@@ -107,14 +107,29 @@ function setCurrentPlant(plant){
 }
 
 function toggleModal(modalType){
-  console.log(modalType);
+  // console.log(modalType);
   return dispatch => {
     dispatch({type: 'TOGGLEMODAL', payload: modalType})
   }
 }
 
-function deletePlant(plantID){
-  console.log(plantID);
+function deletePlant(plant){
+  console.log(plant.id);
+
+  return dispatch => {
+    fetch(`http://localhost:3000/api/v1/plants/${plant.id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      dispatch({type: 'DELETEPLANT'})
+    })
+  }
 }
 
 // function editPassword(password){
@@ -142,4 +157,5 @@ export {
   grabActions,
   setCurrentPlant,
   toggleModal,
+  deletePlant,
 };
