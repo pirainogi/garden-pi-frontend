@@ -18,8 +18,11 @@ class DeletePlantForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     // console.log('sending the edit user fetch');
-    this.props.deletePlant(this.props.state.currentPlant.id)
-    this.props.toggleModal(null)
+    if(this.state.confirm === true){
+      this.props.deletePlant(this.props.state.currentPlant)
+    } else {
+      this.props.toggleModal(null)
+    }
   }
 
   render(){
@@ -27,10 +30,11 @@ class DeletePlantForm extends Component {
     return(
       this.props.state.currentPlant
       ? <div className="deletePlantForm">
-          <h1>delete plant one day</h1>
-          <form>
-            <label>yes i want to delete {this.props.state.currentPlant.name}</label>
+          <h1>Are you sure that you want to delete {this.props.state.currentPlant.name}?</h1>
+          <form onSubmit={this.handleSubmit}>
+            <label>Yes, delete {this.props.state.currentPlant.name}</label>
             <input type="checkbox" onChange={this.handleChange}/>
+            <input type="submit" value="Delete Plant" />
           </form>
         </div>
       : <div>
