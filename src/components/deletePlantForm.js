@@ -11,7 +11,7 @@ class DeletePlantForm extends Component {
 
   handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      confirm: !this.state.confirm
     })
   }
 
@@ -23,9 +23,14 @@ class DeletePlantForm extends Component {
   }
 
   render(){
+    console.log(this.state);
     return(
       <div className="deletePlantForm">
         <h1>delete plant one day</h1>
+        <form>
+          <label>yes i want to delete this thing</label>
+          <input type="checkbox" onChange={this.handleChange}/>
+        </form>
       </div>
     )
   }
@@ -39,3 +44,5 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, actions)(DeletePlantForm);
+
+// <checkbox>are you sure you want to delete {this.props.state.currcurrentPlant.name}</checkbox>
