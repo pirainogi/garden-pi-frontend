@@ -2,6 +2,7 @@ const defaultState = {
   currentUser: null,
   currentPlant: null,
   actions: null,
+  showModal: false,
   currentModal: null,
 }
 
@@ -28,6 +29,12 @@ function reducer(state = defaultState, action){
 
     case 'CURRENTPLANT':
       return {...state, currentPlant: action.payload}
+
+    case 'TOGGLEMODAL':
+      return {...state, showModal: !state.showModal, currentModal: action.payload}
+
+    case 'DELETEPLANT':
+      return {...state, showModal: null, currentModal: null, currentPlant: null}
 
     default:
       return state

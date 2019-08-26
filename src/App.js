@@ -10,6 +10,7 @@ import Signup from './containers/signup'
 import Profile from './containers/profile'
 import Garden from './containers/garden'
 import About from './components/about'
+import Test from './components/test'
 
 class App extends Component {
 
@@ -35,6 +36,7 @@ class App extends Component {
           <Route path='/profile' component={Profile} />
           <Route path='/garden' component={Garden} />
           <Route path='/about' component={About} />
+          <Route path='/test' component={Test}/>
           <Route path='/' component={Home}/>
         </Switch>
       </div>
