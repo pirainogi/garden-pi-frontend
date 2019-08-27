@@ -38,7 +38,6 @@ class LoginForm extends Component {
                 <input type="text" name="email"  placeholder='Email' onChange={this.handleChange} value={this.state.email}/>
                 <input type="password" name="password"  placeholder='Password' onChange={this.handleChange} value={this.state.password}/>
               </div>
-            //<input type="submit" value="Login" className='login-submit'/>
           </form>
         </div>
         <div className='bottombox'>
