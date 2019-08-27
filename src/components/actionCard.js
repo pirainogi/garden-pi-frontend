@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as actions from '../actions/actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTint, faCut, faShoppingBasket, faSun, faCloud,    faPoop, faCannabis, faArchive, faSeedling, faTractor } from '@fortawesome/free-solid-svg-icons'
 import '../css/actionCard.css'
@@ -42,28 +43,7 @@ class ActionCard extends Component {
     this.setState({
       color: 'rgb(0, 0, 0)'
     })
-    const token = localStorage.getItem('token')
-    if(token){
-      fetch('http://localhost:3000/api/v1/logs', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          plant_id: this.props.state.currentPlant.id,
-          action_id: this.props.action.id,
-          amount: null,
-        })
-      })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-      })
-    }
-
-
+    this.props.createPlantLog(this.props.state.currentPlant.id, this.props.action.id)
     setTimeout(() => {
       this.setState({
         color: 'rgb(150, 171, 108)'
@@ -73,7 +53,7 @@ class ActionCard extends Component {
 
 
   render(){
-    console.log(this.props)
+    // console.log(this.props)
     return(
       <div className="actionCard">
         {this.props.action
@@ -97,4 +77,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(ActionCard);
+export default connect(mapStateToProps, actions)(ActionCard);

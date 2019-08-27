@@ -36,6 +36,12 @@ function reducer(state = defaultState, action){
     case 'DELETEPLANT':
       return {...state, showModal: null, currentModal: null, currentPlant: null}
 
+    case 'CREATEPLANTLOG':
+      console.log(action.payload)
+      return {...state, currentPlant: {
+        ...state.currentPlant, logs: [
+        ...state.currentPlant.logs, action.payload]}}
+
     default:
       return state
   }
