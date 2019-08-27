@@ -14,16 +14,13 @@ const CurrentPlantView = (props) => {
 
   function groupName(){
     if(props.state.currentPlant){
-      // console.log(props.state.currentPlant.id)
       let foundGroup = props.state.currentUser.groups.find(group =>
         group.plants.find(plant => plant.id === props.state.currentPlant.id))
-      // console.log(foundGroup)
       return foundGroup.name
     }
   }
 
   let openCloseModal = () => {
-    // console.log('clicking btn');
     props.toggleModal(props.state.showModal ? null : 'DeletePlant')
   }
 
@@ -42,7 +39,6 @@ const CurrentPlantView = (props) => {
   )
   : null
 
-  // console.log('rendering the current plant props', props.state);
   return(
     <div className="currentPlantView">
       <div className='upper-plant-view'>
@@ -70,7 +66,7 @@ const CurrentPlantView = (props) => {
     </div>
   )
 
-}
+} // end of class 
 
 const mapStateToProps = (state) => {
   return {
