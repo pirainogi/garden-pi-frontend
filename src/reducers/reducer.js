@@ -34,21 +34,16 @@ function reducer(state = defaultState, action){
       return {...state, showModal: !state.showModal, currentModal: action.payload}
 
     case 'DELETEPLANT':
-      // console.log(action.payload);
-      console.log(state.currentUser.groups);
       let filteredPlants = state.currentUser.groups.map(group => {
         return {
           id: group.id,
           name: group.name,
           plants: group.plants.filter(plant => {
-          return plant.id != action.payload.id}),
+          return plant.id !== action.payload.id}),
         }
       })
-      console.log(filteredPlants)
-
       return {...state, showModal: null, currentModal: null, currentPlant: null, currentUser: {
           ...state.currentUser.groups, groups: filteredPlants}}
-      //i need to delete the plant from the dom boo
 
     case 'CREATEPLANTLOG':
       console.log(action.payload)
