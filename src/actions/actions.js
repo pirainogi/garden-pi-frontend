@@ -113,6 +113,10 @@ function toggleModal(modalType){
   }
 }
 
+function createPlant(plantObj){
+  console.log(plantObj);
+}
+
 function deletePlant(plant){
   console.log(plant.id);
 
@@ -187,6 +191,7 @@ export {
   grabActions,
   setCurrentPlant,
   toggleModal,
+  createPlant,
   deletePlant,
   createPlantLog,
 };

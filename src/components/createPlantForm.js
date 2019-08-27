@@ -20,6 +20,27 @@ class CreatePlantForm extends Component {
     temperature_min: ''
   }
 
+  componentDidMount(){
+    fetch('http://localhost:3000/api/v1/species')
+    .then(res => res.json())
+    .then(data =>
+      this.setState({
+        species: data
+      })
+    )
+  }
+
+  // createGroups = () => {
+  //   if(this.state.groups.length > 0 ) {
+  //     let options = this.state.groups.map(group => {
+  //     return <option value={group.name}>
+  //     {group.name}
+  //     </option>
+  //     })
+  //     console.log(options);
+  //   }
+  // }
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
@@ -29,7 +50,7 @@ class CreatePlantForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     // console.log('sending the edit user fetch');
-    // this.props.editUser(this.state)
+    this.props.createPlant(this.state)
     this.props.toggleModal()
   }
 
@@ -37,6 +58,20 @@ class CreatePlantForm extends Component {
     return(
       <div className="createPlantForm">
         <h1>make new plant one day</h1>
+        <form onSubmit={this.handleSubmit}>
+            <input type="text" name="name" placeholder="Name" onChange={this.handleChange} value={this.state.name}/><br></br>
+            <input type="integer" name="humidity_max" placeholder="Humidity Max" onChange={this.handleChange} value={this.state.humidity_max}/><br></br>
+            <input type="integer" name="humidity_min" placeholder="Humidity Min" onChange={this.handleChange} value={this.state.humidity_min}/><br></br>
+            <input type="integer" name="ph_max" placeholder="Ph Max" onChange={this.handleChange} value={this.state.ph_max}/><br></br>
+            <input type="integer" name="ph_min" placeholder="Ph Min" onChange={this.handleChange} value={this.state.ph_min}/><br></br>
+            <input type="integer" name="soil_moisture_max" placeholder="Soil Moisture Max" onChange={this.handleChange} value={this.state.soil_moisture_max}/><br></br>
+            <input type="integer" name="soil_moisture_min" placeholder="Soil Moisture Min" onChange={this.handleChange} value={this.state.soil_moisture_min}/><br></br>
+            <input type="integer" name="temperature_min" placeholder="Temperature Min" onChange={this.handleChange} value={this.state.temperature_min}/><br></br>
+            <select value={this.state.group_id} onChange={this.handleChange} name="group_id">
+            {this.createGroups()}
+            </select>
+          <input type="submit" value="Submit" />
+        </form>
       </div>
     )
   }
