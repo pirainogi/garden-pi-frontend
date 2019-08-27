@@ -31,14 +31,11 @@ class CreatePlantForm extends Component {
   }
 
   // createGroups = () => {
-  //   if(this.state.groups.length > 0 ) {
-  //     let options = this.state.groups.map(group => {
-  //     return <option value={group.name}>
+  //   return this.state.groups.map(group => {
+  //     return <option value={group.name} key={group.id}>
   //     {group.name}
   //     </option>
-  //     })
-  //     console.log(options);
-  //   }
+  //   })
   // }
 
   handleChange = (e) => {
