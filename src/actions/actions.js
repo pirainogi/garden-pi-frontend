@@ -117,18 +117,48 @@ function deletePlant(plant){
   console.log(plant.id);
 
   return dispatch => {
-    fetch(`http://localhost:3000/api/v1/plants/${plant.id}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-    })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-      dispatch({type: 'DELETEPLANT'})
-    })
+    const token = localStorage.getItem('token')
+    if(token){
+      fetch(`http://localhost:3000/api/v1/plants/${plant.id}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+      })
+      .then(res => res.json())
+      .then(data => {
+        // console.log(data);
+        dispatch({type: 'DELETEPLANT', payload: data})
+      })
+    }
+  }
+}
+
+function createPlantLog(plantID, actionID){
+  return dispatch => {
+    const token = localStorage.getItem('token')
+    if(token){
+      fetch('http://localhost:3000/api/v1/logs', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          plant_id: plantID,
+          action_id: actionID,
+          amount: null,
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        // console.log(data);
+        dispatch({type: 'CREATEPLANTLOG', payload: data})
+      })
+    }
   }
 }
 
@@ -158,4 +188,5 @@ export {
   setCurrentPlant,
   toggleModal,
   deletePlant,
+  createPlantLog,
 };
