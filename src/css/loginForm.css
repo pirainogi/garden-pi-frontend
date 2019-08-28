@@ -18,9 +18,17 @@
 
 .login-input {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   justify-content: space-evenly;
+}
+
+.login-row1 {
+
+}
+
+.login-row2 {
+  
 }
 
 .login-input input {
@@ -44,8 +52,8 @@
   color: white;
   text-decoration: none;
   font-size: 3vw;
-  margin-top: 2vh;
-  margin-left: 5.5vh;
+  /* margin-top: 2vh;
+  margin-left: 5.5vh; */
 }
 
 .bottombox {
