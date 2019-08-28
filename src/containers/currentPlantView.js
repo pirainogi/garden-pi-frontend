@@ -13,6 +13,10 @@ import '../css/currentPlantView.css'
 
 class CurrentPlantView extends Component {
 
+  state={
+    data_tab: false,
+  }
+
   groupName = () => {
     if(this.props.state.currentPlant){
       let foundGroup = this.props.state.currentUser.groups.find(group =>
@@ -25,10 +29,23 @@ class CurrentPlantView extends Component {
     this.props.toggleModal(this.props.state.showModal ? null : 'DeletePlant')
   }
 
+  toggleDataTab = () => {
+    // console.log('trying to change state', this.state.data_tab);
+    this.setState({
+      data_tab: true
+    })
+    // console.log('state change?', this.state.data_tab);
+  }
+
+  toggleInfoTab = () => {
+    this.setState({
+      data_tab: false
+    })
+  }
 
 
   render(){
-
+    console.log('datatab', this.state.data_tab);
     const modal = this.props.state.currentModal === 'DeletePlant'
     ? (
       <Modal>
@@ -65,8 +82,8 @@ class CurrentPlantView extends Component {
             <div className='right-plant-view'>
               {this.props.state.currentPlant ? <p className='garden-group-name'>{this.groupName()}</p> : <p className='garden-group-name'>group name</p>}
               <button className='remove-plant-btn' onClick={this.openCloseModal}>remove plant</button>
-              <button className='data-tab'>data</button>
-              <button className='info-tab'>info</button>
+              <button className='data-tab' onClick={this.toggleDataTab}>data</button>
+              <button className='info-tab' onClick={this.toggleInfoTab}>info</button>
               {modal}
             </div>
           </div>
