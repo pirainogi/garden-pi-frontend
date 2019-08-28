@@ -93,7 +93,7 @@
 
 .data-tab {
   background-color: rgb(150, 171, 108);
-  border-radius: 20px;
+  border-radius: 15px 15px 0 0;
   padding-top: 1vh;
   padding-left: 4vh;
   padding-right: 4vh;
@@ -111,7 +111,7 @@
 
 .info-tab {
   background-color: rgb(150, 171, 108);
-  border-radius: 20px;
+  border-radius: 15px 15px 0 0;
   padding-top: 1vh;
   padding-left: 4vh;
   padding-right: 4vh;
