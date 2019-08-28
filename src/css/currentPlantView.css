@@ -8,6 +8,7 @@
   margin-left: 2.5vh;
   display: flex;
   flex-direction: column;
+  z-index: 99;
 }
 
 .upper-plant-view {
@@ -107,6 +108,7 @@
   position: absolute;
   top: 16vh;
   right: 0vh;
+  z-index: auto;
 }
 
 .info-tab {
@@ -125,6 +127,7 @@
   position: absolute;
   top: 16vh;
   right: 9vh;
+  z-index: auto;
 }
 
 .unpop-plant-view {
