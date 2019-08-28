@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import * as actions from '../actions/actions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLeaf } from '@fortawesome/free-solid-svg-icons'
 
 import '../css/home.css'
 import Footer from './footer'
@@ -32,15 +34,7 @@ class Home extends Component {
       <div>
         <div className="home-container">
           <div className="tophalf">
-
-            <form onSubmit={this.handleSubmit}>
-              <input type="email" name="email" onChange={this.handleChange} value={this.state.email} placeholder="Email"/>
-              <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password"/>
-              <input type="submit" value="Login" className="button"/>
-            </form>
-
-            <p>Forgot Password?</p>
-            <h1> Join the Garden Party</h1>
+            <h1> Join the Garden Party <FontAwesomeIcon icon={faLeaf} size='1x' color={'white'}/></h1>
             <h3> TAGLINE TAGLINE TAGLINE </h3>
           </div>
           <div className="bottomhalf">
