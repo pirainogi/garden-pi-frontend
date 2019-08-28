@@ -35,7 +35,7 @@ class Home extends Component {
         <div className="home-container">
           <div className="tophalf">
             <h1> Join the Garden Party <FontAwesomeIcon icon={faLeaf} size='1x' color={'white'}/></h1>
-            <h3> TAGLINE TAGLINE TAGLINE </h3>
+            <h3> Become the Ultimate Plant Parent and Communicate Today </h3>
           </div>
           <div className="bottomhalf">
             <div className='link-row'>

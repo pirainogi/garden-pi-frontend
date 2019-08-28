@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  top: 7vh;
+  top: 10vh;
   justify-content: space-evenly;
 }
 
@@ -55,5 +55,5 @@
   border-radius: 20px;
   color: white;
   text-decoration: none;
-  font-size: 4vw;
+  font-size: 2.5vw;
 }
