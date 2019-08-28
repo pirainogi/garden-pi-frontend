@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 import Modal from '../components/modal';
 import DeletePlantForm from '../components/deletePlantForm';
-import HealthMeter from '../components/healthMeter';
+import Chart from '../components/chart';
 import ToDo from './todo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes, faTree } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faPagelines } from '@fortawesome/free-brands-svg-icons';
 import '../css/modal.css';
 import '../css/currentPlantView.css'
@@ -73,6 +73,7 @@ class CurrentPlantView extends Component {
           <div className="currentPlantView">
             <div className='upper-plant-view data-view'>
               test test test
+              <Chart/>
               <div className='right-plant-view'>
                 <button className='data-tab' onClick={this.toggleDataTab}>data</button>
                 <button className='info-tab' onClick={this.toggleInfoTab}>info</button>
