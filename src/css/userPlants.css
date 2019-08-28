@@ -34,9 +34,9 @@
 
 .plant-card-container {
   height: 65vh;
-  border-style: solid;
+  /* border-style: solid;
   border-width: 3px;
-  border-color: mediumseagreen;
+  border-color: mediumseagreen; */
   margin-top: 1vh;
   display: grid;
   grid-template-columns: auto auto auto;
