@@ -6,32 +6,32 @@ const defaultState = {
   currentModal: null,
 }
 
-function reducer(state = defaultState, action){
-  switch(action.type) {
+function reducer(state = defaultState, action) {
+  switch (action.type) {
 
     case 'SIGNUP':
-      return {...state, currentUser: action.payload}
+      return { ...state, currentUser: action.payload }
 
     case 'LOGIN':
-      return {...state, currentUser: action.payload}
+      return { ...state, currentUser: action.payload }
 
     case 'AUTOLOGIN':
-      return {...state, currentUser: action.payload}
+      return { ...state, currentUser: action.payload }
 
     case 'LOGOUT':
-      return {...state, currentUser: null}
+      return { ...state, currentUser: null }
 
     case 'EDITUSER':
-      return {...state, currentUser: action.payload}
+      return { ...state, currentUser: action.payload }
 
     case 'ACTIONS':
-      return {...state, actions: action.payload}
+      return { ...state, actions: action.payload }
 
     case 'CURRENTPLANT':
-      return {...state, currentPlant: action.payload}
+      return { ...state, currentPlant: action.payload }
 
     case 'TOGGLEMODAL':
-      return {...state, showModal: !state.showModal, currentModal: action.payload}
+      return { ...state, showModal: !state.showModal, currentModal: action.payload }
 
     case 'DELETEPLANT':
       let filteredPlants = state.currentUser.groups.map(group => {
@@ -39,17 +39,41 @@ function reducer(state = defaultState, action){
           id: group.id,
           name: group.name,
           plants: group.plants.filter(plant => {
-          return plant.id !== action.payload.id}),
+            return plant.id !== action.payload.id
+          }),
         }
       })
-      return {...state, showModal: null, currentModal: null, currentPlant: null, currentUser: {
-          ...state.currentUser.groups, groups: filteredPlants}}
+      return {
+        ...state, showModal: null, currentModal: null, currentPlant: null, currentUser: {
+          ...state.currentUser.groups, groups: filteredPlants
+        }
+      }
 
+    case 'ADDPLANT':
+      const updatedGroups = state.currentUser.groups.map(group => {
+        if (action.payload.group_id === group.id) {
+          return { ...group, plants: [...group.plants, action.payload] }
+        }
+        return group
+      })
+      return {
+        ...state,
+        showModal: null,
+        currentModal: null,
+        currentPlant: null,
+        currentUser: {
+          ...state.currentUser,
+          groups: updatedGroups
+        }
+      }
     case 'CREATEPLANTLOG':
       console.log(action.payload)
-      return {...state, currentPlant: {
-        ...state.currentPlant, logs: [
-        ...state.currentPlant.logs, action.payload]}}
+      return {
+        ...state, currentPlant: {
+          ...state.currentPlant, logs: [
+            ...state.currentPlant.logs, action.payload]
+        }
+      }
 
     default:
       return state
