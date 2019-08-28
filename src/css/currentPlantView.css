@@ -12,7 +12,8 @@
 }
 
 .data-view {
-  height: 23vh;
+  /* height: 23vh; */
+  width: 100vw;
 }
 
 .upper-plant-view {

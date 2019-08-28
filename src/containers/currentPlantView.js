@@ -72,7 +72,6 @@ class CurrentPlantView extends Component {
         ?
           <div className="currentPlantView">
             <div className='upper-plant-view data-view'>
-              test test test
               <Chart/>
               <div className='right-plant-view'>
                 <button className='data-tab' onClick={this.toggleDataTab}>data</button>
@@ -81,39 +80,44 @@ class CurrentPlantView extends Component {
             </div>
           </div>
         :
-          <div className="currentPlantView">
-            <div className='upper-plant-view'>
-              <div className='left-plant-view'>
-                <div className='plant-basics'>
-                  <p>{this.props.state.currentPlant.name}</p>
-                  <div className='plant-pic'><span className='icon'><FontAwesomeIcon icon={faPagelines} size='5x' color={'white'}/></span></div>
+          <div>
+            <div className="currentPlantView">
+              <div className='upper-plant-view'>
+                <div className='left-plant-view'>
+                  <div className='plant-basics'>
+                    <p>{this.props.state.currentPlant.name}</p>
+                    <div className='plant-pic'><span className='icon'><FontAwesomeIcon icon={faPagelines} size='5x' color={'white'}/></span></div>
+                  </div>
+                  <div className='plant-health'>
+                    <p>family info here</p>
+                    <p>age of plant</p>
+                  </div>
                 </div>
-                <div className='plant-health'>
-                  <p>family info here</p>
-                  <p>age of plant</p>
+                <div className='right-plant-view'>
+                  {this.props.state.currentPlant ? <p className='garden-group-name'>{this.groupName()}</p> : <p className='garden-group-name'>group name</p>}
+                  <button className='remove-plant-btn' onClick={this.openCloseModal}>remove plant</button>
+                  <button className='data-tab' onClick={this.toggleDataTab}>data</button>
+                  <button className='info-tab' onClick={this.toggleInfoTab}>info</button>
+                  {modal}
                 </div>
-              </div>
-              <div className='right-plant-view'>
-                {this.props.state.currentPlant ? <p className='garden-group-name'>{this.groupName()}</p> : <p className='garden-group-name'>group name</p>}
-                <button className='remove-plant-btn' onClick={this.openCloseModal}>remove plant</button>
-                <button className='data-tab' onClick={this.toggleDataTab}>data</button>
-                <button className='info-tab' onClick={this.toggleInfoTab}>info</button>
-                {modal}
               </div>
             </div>
+            <ToDo/>
           </div>
         }
         </div>
         :
-        <div className="currentPlantView">
-          <div className='upper-plant-view'>
-            <div className='unpop-plant-view'>
-              <p>Click on a Plant to View Details</p>
+        <div>
+          <div className="currentPlantView">
+            <div className='upper-plant-view'>
+              <div className='unpop-plant-view'>
+                <p>Click on a Plant to View Details</p>
+              </div>
             </div>
           </div>
+          <ToDo/>
         </div>
       }
-        <ToDo/>
       </div>
     )
   }
