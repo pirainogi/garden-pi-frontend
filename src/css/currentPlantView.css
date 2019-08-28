@@ -12,18 +12,12 @@
 }
 
 .upper-plant-view {
-  /* border-style: solid;
-  border-width: 3px;
-  border-color: red; */
   width: auto;
   display: flex;
   flex-direction: row;
 }
 
 .left-plant-view {
-  /* border-style: solid;
-  border-width: 3px;
-  border-color: brown; */
   margin-left: 1vw;
   width: 48vw;
   display: flex;
@@ -69,7 +63,6 @@
   padding-left: 4vh;
   padding-right: 4vh;
   padding-bottom: 1vh;
-  /* color: rgb(150, 171, 108); */
   text-decoration: none;
   font-size: 2vw;
   width: 25vw;

@@ -4,6 +4,7 @@
   border-color: rgb(150, 171, 108);
   border-radius: 36px 36px 0 0;
   height: 30vh;
+  width: 80vw;
 }
 
 .login-title {
@@ -52,6 +53,7 @@
   border-radius: 0 0 36px 36px;
   height: 9vh;
   background-color: rgb(150, 171, 108);
+  width: 80vw;
   /* margin-top: 15vh; */
 }
 

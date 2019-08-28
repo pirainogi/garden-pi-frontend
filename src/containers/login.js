@@ -8,7 +8,9 @@ const Login = () => {
   return(
     <div className="login">
       <Header />
-      <LoginForm />
+      <div className="login-wrapper">
+        <LoginForm />
+      </div>
     </div>
   )
 }
