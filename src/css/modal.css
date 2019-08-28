@@ -10,17 +10,39 @@
   position: fixed;
   top: 0;
   left: 0;
-  border-style: solid;
+  /* border-style: solid;
   border-width: 3px;
-  border-color: mediumseagreen;
+  border-color: mediumseagreen; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .modal-content {
+  /* border-color: yellow;
   border-style: solid;
-  border-width: 3px;
-  border-color: purple;
+  border-width: 3px; */
+  border-radius: 36px 36px 36px 36px;
+  /* padding: 3vh; */
   background-color: white;
+  margin: 3vh;
+}
+
+.topbox-modal {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(150, 171, 108);
+  border-radius: 36px 36px 0 0;
+  height: 7.5vh;
+  background-color: rgb(150, 171, 108);
+}
+
+.topbox-modal button {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.deletePlantForm {
+  padding: 1vh;
+  margin: 1vh;
 }

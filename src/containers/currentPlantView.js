@@ -31,7 +31,9 @@ const CurrentPlantView = (props) => {
       <div id="outer-modal">
         <div className="inner-modal">
           <div className="modal-content">
-          <button onClick={() => openCloseModal()}><FontAwesomeIcon icon={faTimes} size='1x' color={'rgb(150, 171, 108)'}/></button>
+          <div className='topbox-modal'>
+            <button onClick={() => openCloseModal()}><FontAwesomeIcon icon={faTimes} size='1x' color={'rgb(150, 171, 108)'}/></button>
+          </div>
           <DeletePlantForm />
           </div>
         </div>
