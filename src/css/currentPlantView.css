@@ -55,6 +55,7 @@
   width: 13vh;
   background-color: rgb(150, 171, 108);
   border-radius: 20px;
+  text-align: center;
 }
 
 .plant-health {
@@ -109,4 +110,10 @@
   position: relative;
   display: inline-block;
   left: 70%;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  margin-top: 1vh;
 }

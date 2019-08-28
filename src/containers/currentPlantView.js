@@ -6,7 +6,8 @@ import DeletePlantForm from '../components/deletePlantForm';
 import HealthMeter from '../components/healthMeter';
 import ToDo from './todo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faTree } from '@fortawesome/free-solid-svg-icons'
+import { faPagelines } from '@fortawesome/free-brands-svg-icons';
 import '../css/modal.css';
 import '../css/currentPlantView.css'
 
@@ -47,7 +48,7 @@ const CurrentPlantView = (props) => {
           <div className='left-plant-view'>
             <div className='plant-basics'>
               <p>{props.state.currentPlant.name}</p>
-              <div className='plant-pic'></div>
+              <div className='plant-pic'><span className='icon'><FontAwesomeIcon icon={faPagelines} size='5x' color={'white'}/></span></div>
             </div>
             <div className='plant-health'>
               <p>family info here</p>
