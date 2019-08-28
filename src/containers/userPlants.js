@@ -25,30 +25,32 @@ class UserPlants extends Component {
       return this.props.state.currentUser.groups.map(group => {
         return group.plants.map(plant => {
           // console.log(plant);
-          return <PlantCard key={plant.id} plant={plant}/>
+          return <PlantCard key={plant.id} plant={plant} />
         })
       })
     }
   }
 
-  render(){
+  render() {
     // console.log('user info render', this.props.state.currentUser);
     const modal = this.props.state.currentModal === 'CreatePlant'
-    ? (
-      <Modal>
-        <div id="outer-modal">
-          <div className="inner-modal">
-            <div className="modal-content">
-            <button onClick={this.openCloseModal}><FontAwesomeIcon icon={faTimes} size='1x' color={'rgb(150, 171, 108)'}/></button>
-            <CreatePlantForm />
+      ? (
+        <Modal>
+          <div id="outer-modal">
+            <div className="inner-modal">
+              <div className="modal-content">
+                <div className='topbox-modal'>
+                  <button onClick={this.openCloseModal}><FontAwesomeIcon icon={faTimes} size='1x' color={'rgb(150, 171, 108)'} /></button>
+                  <CreatePlantForm />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </Modal>
-    )
-    : null
+        </Modal>
+      )
+      : null
 
-    return(
+    return (
       <div className="userPlants">
         <div className='user-plant-title'>
           <span>My Plants</span>
@@ -58,7 +60,7 @@ class UserPlants extends Component {
           {modal}
         </div>
         <div className='plant-card-container'>
-        {this.renderPlants()}
+          {this.renderPlants()}
         </div>
       </div>
     )
