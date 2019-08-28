@@ -40,33 +40,42 @@ const CurrentPlantView = (props) => {
   : null
 
   return(
-    <div className="currentPlantView">
-      <div className='upper-plant-view'>
-        <div className='left-plant-view'>
-          <div className='plant-basics'>
-            {props.state.currentPlant
-              ? <p>{props.state.currentPlant.name}</p>
-              : <p>plant name</p>
-            }
-            <div className='plant-pic'></div>
+    <div>{ props.state.currentPlant
+      ?
+      <div className="currentPlantView">
+        <div className='upper-plant-view'>
+          <div className='left-plant-view'>
+            <div className='plant-basics'>
+              <p>{props.state.currentPlant.name}</p>
+              <div className='plant-pic'></div>
+            </div>
+            <div className='plant-health'>
+              <p>family info here</p>
+              <p>age of plant</p>
+              <HealthMeter/>
+            </div>
           </div>
-          <div className='plant-health'>
-            <p>family info here</p>
-            <p>age of plant</p>
-            <HealthMeter/>
+          <div className='right-plant-view'>
+            {props.state.currentPlant ? <p className='garden-group-name'>{groupName()}</p> : <p className='garden-group-name'>group name</p>}
+            <button className='remove-plant-btn' onClick={() => openCloseModal()}>remove plant</button>
+            {modal}
           </div>
-        </div>
-        <div className='right-plant-view'>
-          {props.state.currentPlant ? <p className='garden-group-name'>{groupName()}</p> : <p className='garden-group-name'>group name</p>}
-          <button className='remove-plant-btn' onClick={() => openCloseModal()}>remove plant</button>
-          {modal}
         </div>
       </div>
+      :
+      <div className="currentPlantView">
+        <div className='upper-plant-view'>
+          <div className='unpop-plant-view'>
+            <p>Click on a Plant to View Details</p>
+          </div>
+        </div>
+      </div>
+    }
       <ToDo/>
     </div>
   )
 
-} // end of class 
+} // end of class
 
 const mapStateToProps = (state) => {
   return {

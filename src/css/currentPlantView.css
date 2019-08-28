@@ -98,3 +98,15 @@
   text-align: center;
   display: inline-block;
 }
+
+.unpop-plant-view {
+  height: 23vh;
+  font-size: 3vw;
+  text-align: center;
+}
+
+.unpop-plant-view p {
+  position: relative;
+  display: inline-block;
+  left: 70%;
+}
