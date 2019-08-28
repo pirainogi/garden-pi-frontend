@@ -34,7 +34,7 @@ class DeletePlantForm extends Component {
             <h1>Are you sure that you want to delete {this.props.state.currentPlant.name}?</h1>
             <form onSubmit={this.handleSubmit}>
               <label>Yes, delete {this.props.state.currentPlant.name}</label>
-              <input type="checkbox" onChange={this.handleChange}/>
+              <input type="checkbox" onChange={this.handleChange}/><br></br>
               <input type="submit" value="Delete Plant" />
             </form>
           </div>

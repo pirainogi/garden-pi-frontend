@@ -10,18 +10,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  /* border-style: solid;
-  border-width: 3px;
-  border-color: mediumseagreen; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .modal-content {
-  /* border-color: yellow;
-  border-style: solid;
-  border-width: 3px; */
   border-radius: 36px 36px 36px 36px;
   /* padding: 3vh; */
   background-color: white;
@@ -45,4 +39,22 @@
 .deletePlantForm {
   padding: 1vh;
   margin: 1vh;
+  text-align: center;
+}
+
+.deletePlantForm form {
+  display: inline-block;
+}
+
+.editUserForm {
+  padding: 1vh;
+  margin: 1vh;
+  text-align: center;
+}
+
+.editUserForm form {
+  display: inline-block;
+  /* position: relative;
+  justify-content: center; */
+
 }
