@@ -4,14 +4,16 @@
   border-color: rgb(150, 171, 108);
   border-radius: 36px 36px 0 0;
   height: 30vh;
-  width: 80vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
 }
 
 .login-title {
-  font-size: 4.5vw;
+  font-size: 3.5vw;
   margin-top: 3vh;
   margin-left: 4vh;
   color: #404040;
+  text-align: center;
 }
 
 .login-input {
@@ -53,8 +55,8 @@
   border-radius: 0 0 36px 36px;
   height: 9vh;
   background-color: rgb(150, 171, 108);
-  width: 80vw;
-  /* margin-top: 15vh; */
+  margin-left: 8vw;
+  margin-right: 8vw;
 }
 
 .signup-link {
