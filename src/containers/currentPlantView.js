@@ -55,12 +55,13 @@ const CurrentPlantView = (props) => {
             <div className='plant-health'>
               <p>family info here</p>
               <p>age of plant</p>
-              <HealthMeter/>
             </div>
           </div>
           <div className='right-plant-view'>
             {props.state.currentPlant ? <p className='garden-group-name'>{groupName()}</p> : <p className='garden-group-name'>group name</p>}
             <button className='remove-plant-btn' onClick={() => openCloseModal()}>remove plant</button>
+            <button className='data-tab'>data</button>
+            <button className='info-tab'>info</button>
             {modal}
           </div>
         </div>
