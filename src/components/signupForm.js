@@ -22,10 +22,10 @@ class SignupForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     // console.log('sending the fetch');
-    if(this.state.name !== '' && this.state.email !== '' && this.state.password !== '' && this.state.password === this.state.matching_password){
+    if (this.state.name !== '' && this.state.email !== '' && this.state.password !== '' && this.state.password === this.state.matching_password) {
       this.props.signupUser(this.state)
       const token = localStorage.getItem('token')
-      if(token){
+      if (token) {
         this.props.history.push('/profile')
       }
     } else {
@@ -33,29 +33,27 @@ class SignupForm extends Component {
     }
   }
 
-  render(){
+  render() {
     // console.log(this.state);
-    return(
-      <div>
+    return (
+      <form onSubmit={this.handleSubmit}>
         <div className="signup-container">
           <div className='signup-title'>
             <span>Signup for Garden Party</span>
           </div>
-          <form onSubmit={this.handleSubmit}>
-            <div className='signup-form'>
-              <div className='signup-input'>
-              <input type="text" name="name" placeholder='Name (First and Last)' onChange={this.handleChange} value={this.state.name}/>
-              <input type="text" name="email" placeholder='Email' onChange={this.handleChange} value={this.state.email}/>
-              <input type="password" name="password" placeholder='Password' onChange={this.handleChange} value={this.state.password}/>
-              <input type="password" name="matching_password" placeholder='Retype Password' onChange={this.handleChange} value={this.state.matching_password}/>
-              </div>
+          <div className='signup-form'>
+            <div className='signup-input'>
+              <input type="text" name="name" placeholder='Name (First and Last)' onChange={this.handleChange} value={this.state.name} />
+              <input type="text" name="email" placeholder='Email' onChange={this.handleChange} value={this.state.email} />
+              <input type="password" name="password" placeholder='Password' onChange={this.handleChange} value={this.state.password} />
+              <input type="password" name="matching_password" placeholder='Retype Password' onChange={this.handleChange} value={this.state.matching_password} />
             </div>
-          </form>
+          </div>
         </div>
         <div className='bottombox'>
-          <input type="submit" value="Submit" className='signup-submit'/>
+          <input type="submit" value="Submit" className='signup-submit' />
         </div>
-      </div>
+      </form>
     )
   }
 

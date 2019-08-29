@@ -10,6 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "chart.xkcd": "^1.0.10",
     "chart.xkcd-react": "0.0.4",
+    "dayjs": "^1.8.16",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",

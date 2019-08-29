@@ -12,8 +12,7 @@
 }
 
 .data-view {
-  height: 60vh;
-  width: 100vw;
+  min-height: 60vh;
 }
 
 .upper-plant-view {
@@ -90,7 +89,26 @@
   display: inline-block;
 }
 
-.data-tab {
+.tab-list {
+  position: relative;
+  top: 0;
+  left: 2rem;
+}
+
+.tab-list .tab {
+  background-color: rgb(150, 171, 108);
+  border-radius: 0 0 15px 15px;
+  padding-top: 1vh;
+  padding-left: 4vh;
+  padding-right: 4vh;
+  padding-bottom: 1vh;
+  color: white;
+  text-decoration: none;
+  height: 3rem;
+  font-size: 1.5em;
+}
+
+/* .data-tab {
   background-color: rgb(150, 171, 108);
   border-radius: 15px 15px 0 0;
   padding-top: 1vh;
@@ -126,7 +144,7 @@
   top: 16vh;
   right: 9vh;
   z-index: auto;
-}
+} */
 
 .unpop-plant-view {
   height: 23vh;

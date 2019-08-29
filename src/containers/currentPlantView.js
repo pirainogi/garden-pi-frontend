@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import dayjs from 'dayjs'
 import * as actions from '../actions/actions';
 import Modal from '../components/modal';
 import DeletePlantForm from '../components/deletePlantForm';
@@ -13,12 +14,12 @@ import '../css/currentPlantView.css'
 
 class CurrentPlantView extends Component {
 
-  state={
-    data_tab: false,
+  state = {
+    activeTab: "info",
   }
 
   groupName = () => {
-    if(this.props.state.currentPlant){
+    if (this.props.state.currentPlant) {
       let foundGroup = this.props.state.currentUser.groups.find(group =>
         group.plants.find(plant => plant.id === this.props.state.currentPlant.id))
       return foundGroup.name
@@ -29,84 +30,90 @@ class CurrentPlantView extends Component {
     this.props.toggleModal(this.props.state.showModal ? null : 'DeletePlant')
   }
 
-  toggleDataTab = () => {
-    // console.log('trying to change state', this.state.data_tab);
-    this.setState({
-      data_tab: true
-    })
-    // console.log('state change?', this.state.data_tab);
+  toggleTab = activeTab => this.setState({ activeTab })
+
+  getMeasurements() {
+    return this.props.state.currentPlant.measurements
+      .map(m => ({
+        label: dayjs(m.timestamp * 1000),
+        moisture: parseFloat(m.moisture),
+        temperature: parseInt(m.temperature),
+        humidity: parseInt(m.humidity)
+      }))
   }
 
-  toggleInfoTab = () => {
-    this.setState({
-      data_tab: false
-    })
+  getTabContent() {
+    switch (this.state.activeTab) {
+      case "info":
+        return (
+          <>
+            <div className='left-plant-view'>
+              <div className='plant-basics'>
+                <p>{this.props.state.currentPlant.name}</p>
+                <div className='plant-pic'><span className='icon'><FontAwesomeIcon icon={faPagelines} size='5x' color={'white'} /></span></div>
+              </div>
+              <div className='plant-health'>
+                <p>family info here</p>
+                <p>age of plant</p>
+              </div>
+            </div>
+            <div className='right-plant-view'>
+              {this.props.state.currentPlant ? <p className='garden-group-name'>{this.groupName()}</p> : <p className='garden-group-name'>group name</p>}
+              <button className='remove-plant-btn' onClick={this.openCloseModal}>remove plant</button>
+              {this.getModal()}
+            </div>
+          </>
+        );
+      case "temperature":
+        return <Chart
+          measurements={this.getMeasurements()}
+          name={this.props.state.currentPlant.name}
+          dataKey="temperature"
+          chartTitle="Temperature"
+          chartLabel="Degrees C"
+        />
+      case "humidity":
+        return <Chart
+          measurements={this.getMeasurements()}
+          name={this.props.state.currentPlant.name}
+          dataKey="humidity"
+          chartTitle="Humidity"
+          chartLabel="% Humidity"
+        />
+      case "moisture":
+        return <Chart
+          measurements={this.getMeasurements()}
+          name={this.props.state.currentPlant.name}
+          dataKey="moisture"
+          chartTitle="Moisture"
+          chartLabel="Moist/Not Moist"
+        />
+      default:
+        return null;
+    }
   }
 
-
-  render(){
-    console.log('datatab', this.state.data_tab);
-    const modal = this.props.state.currentModal === 'DeletePlant'
-    ? (
+  getModal() {
+    if (this.props.state.currentModal !== 'DeletePlant') return null;
+    return (
       <Modal>
         <div id="outer-modal">
           <div className="inner-modal">
             <div className="modal-content">
-            <div className='topbox-modal'>
-              <button onClick={this.openCloseModal}><FontAwesomeIcon icon={faTimes} size='1x' color={'rgb(150, 171, 108)'}/></button>
-            </div>
-            <DeletePlantForm />
+              <div className='topbox-modal'>
+                <button onClick={this.openCloseModal}><FontAwesomeIcon icon={faTimes} size='1x' color={'rgb(150, 171, 108)'} /></button>
+              </div>
+              <DeletePlantForm />
             </div>
           </div>
         </div>
       </Modal>
     )
-    : null
+  }
 
-
-    return(
-      <div>{ this.props.state.currentPlant
-        ?
-        <div>
-        { this.state.data_tab
-        ?
-          <div className="currentPlantView">
-            <div className='upper-plant-view data-view'>
-              <Chart/>
-              <div className='right-plant-view'>
-                <button className='data-tab' onClick={this.toggleDataTab}>data</button>
-                <button className='info-tab' onClick={this.toggleInfoTab}>info</button>
-              </div>
-            </div>
-          </div>
-        :
-          <div>
-            <div className="currentPlantView">
-              <div className='upper-plant-view'>
-                <div className='left-plant-view'>
-                  <div className='plant-basics'>
-                    <p>{this.props.state.currentPlant.name}</p>
-                    <div className='plant-pic'><span className='icon'><FontAwesomeIcon icon={faPagelines} size='5x' color={'white'}/></span></div>
-                  </div>
-                  <div className='plant-health'>
-                    <p>family info here</p>
-                    <p>age of plant</p>
-                  </div>
-                </div>
-                <div className='right-plant-view'>
-                  {this.props.state.currentPlant ? <p className='garden-group-name'>{this.groupName()}</p> : <p className='garden-group-name'>group name</p>}
-                  <button className='remove-plant-btn' onClick={this.openCloseModal}>remove plant</button>
-                  <button className='data-tab' onClick={this.toggleDataTab}>data</button>
-                  <button className='info-tab' onClick={this.toggleInfoTab}>info</button>
-                  {modal}
-                </div>
-              </div>
-            </div>
-            <ToDo/>
-          </div>
-        }
-        </div>
-        :
+  render() {
+    if (!this.props.state.currentPlant) {
+      return (
         <div>
           <div className="currentPlantView">
             <div className='upper-plant-view'>
@@ -115,9 +122,23 @@ class CurrentPlantView extends Component {
               </div>
             </div>
           </div>
-          <ToDo/>
+          <ToDo />
         </div>
-      }
+      )
+    }
+
+    return (
+      <div>
+        <div className="currentPlantView">
+          <div className="tab-list">
+            <button className='tab' onClick={() => this.toggleTab("info")}>info</button>
+            <button className='tab' onClick={() => this.toggleTab("temperature")}>temperature</button>
+            <button className='tab' onClick={() => this.toggleTab("humidity")}>humidity</button>
+            <button className='tab' onClick={() => this.toggleTab("moisture")}>moisture</button>
+          </div>
+          {this.getTabContent()}
+        </div>
+        <ToDo />
       </div>
     )
   }
