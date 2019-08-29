@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
+import * as api from '../services/api'
 import '../css/form.css';
 
 import Select from './form/select'
@@ -27,27 +28,25 @@ class CreatePlantForm extends Component {
 
   componentDidMount() {
     Promise.all([
-      fetch('http://localhost:3000/api/v1/species').then(r => r.json()),
-      fetch('http://localhost:3000/api/v1/groups').then(r => r.json())
+      api.getSpecies(),
+      api.getGroups()
     ])
       .then(([species, groups]) => this.setState({ groups, species }))
   }
 
   handleSpeciesChange = e => {
-    fetch(`http://localhost:3000/api/v1/species/${e.target.value}`)
-      .then(r => r.json())
-      .then(speciesData => {
-        this.setState({
-          species_id: speciesData.id,
-          humidity_min: speciesData.humidity_min || this.state.formData.humidity_min,
-          humidity_max: speciesData.humidity_max || this.state.formData.humidity_max,
-          ph_min: speciesData.ph_min || this.state.formData.ph_min,
-          ph_max: speciesData.ph_max || this.state.formData.ph_max,
-          soil_moisture_min: speciesData.soil_moisture_min || this.state.formData.soil_moisture_min,
-          soil_moisture_max: speciesData.soil_moisture_max || this.state.formData.soil_moisture_max,
-          temperature_min: speciesData.temperature_min || this.state.formData.temperature_min
-        })
+    api.getOneSpecies(e.target.value).then(speciesData => {
+      this.setState({
+        species_id: speciesData.id,
+        humidity_min: speciesData.humidity_min || this.state.formData.humidity_min,
+        humidity_max: speciesData.humidity_max || this.state.formData.humidity_max,
+        ph_min: speciesData.ph_min || this.state.formData.ph_min,
+        ph_max: speciesData.ph_max || this.state.formData.ph_max,
+        soil_moisture_min: speciesData.soil_moisture_min || this.state.formData.soil_moisture_min,
+        soil_moisture_max: speciesData.soil_moisture_max || this.state.formData.soil_moisture_max,
+        temperature_min: speciesData.temperature_min || this.state.formData.temperature_min
       })
+    })
     this.handleChange(e)
   }
 

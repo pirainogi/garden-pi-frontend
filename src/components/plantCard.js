@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLeaf } from '@fortawesome/free-solid-svg-icons'
 
+import * as api from '../services/api'
+
 import '../css/plantCard.css';
 
 class PlantCard extends Component {
@@ -10,25 +12,24 @@ class PlantCard extends Component {
     species: ''
   }
 
-  componentDidMount(){
-    if(this.props.plant){
-      fetch(`http://localhost:3000/api/v1/species/${this.props.plant.species_id}`)
-      .then(res => res.json())
-      .then(data => {
-        this.setState({
-          species: data.scientific_name
+  componentDidMount() {
+    if (this.props.plant) {
+      api.getOneSpecies(this.props.plant.species_id)
+        .then(data => {
+          this.setState({
+            species: data.scientific_name
+          })
         })
-      })
     }
   }
 
-  render(){
+  render() {
     // console.log(this.props);
-    return(
+    return (
       <div className="plantCard" onClick={() => this.props.renderCurrentPlantView(this.props.plant)}>
         {this.props.plant
           ? <div>
-            <FontAwesomeIcon icon={faLeaf} size='1x' color={'rgb(150, 171, 108)'}/>
+            <FontAwesomeIcon icon={faLeaf} size='1x' color={'rgb(150, 171, 108)'} />
             <span className='plantName'> {this.props.plant.name}</span><br></br>
             <span>Species: {this.state.species}</span><br></br>
           </div>

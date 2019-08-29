@@ -1,38 +1,19 @@
+import * as api from '../services/api'
+
 function autoLogin() {
   return dispatch => {
-    const token = localStorage.getItem('token')
-    // console.log('in autologin', token);
-    if (token) {
-      fetch('http://localhost:3000/api/v1/auto_login', {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-        },
-      })
-        .then(res => res.json())
-        .then(data => {
-          dispatch({ type: "AUTOLOGIN", payload: data.user })
-        })
-    }
+    api.autoLogin().then(data => {
+      dispatch({ type: "AUTOLOGIN", payload: data.user })
+    })
   }
 }
 
 function loginUser(userInfo) {
   return dispatch => {
-    fetch('http://localhost:3000/api/v1/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        email: userInfo.email,
-        password: userInfo.password
-      })
-    })
-    .then(res => res.json())
-    .then(data => {
-      console.log('data back from server', data);
+    api.login({
+      email: userInfo.email,
+      password: userInfo.password
+    }).then(data => {
       localStorage.setItem('token', data.jwt)
       dispatch({ type: "LOGIN", payload: data.user })
     })
@@ -41,23 +22,14 @@ function loginUser(userInfo) {
 
 function signupUser(userInfo) {
   return dispatch => {
-    fetch('http://localhost:3000/api/v1/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        name: userInfo.name,
-        email: userInfo.email,
-        password: userInfo.password
-      })
+    api.signUp({
+      name: userInfo.name,
+      email: userInfo.email,
+      password: userInfo.password
+    }).then(data => {
+      localStorage.setItem('token', data.jwt)
+      dispatch({ type: "SIGNUP", payload: data.user })
     })
-      .then(res => res.json())
-      .then(data => {
-        localStorage.setItem('token', data.jwt)
-        dispatch({ type: "SIGNUP", payload: data.user })
-      })
   }
 }
 
@@ -70,32 +42,20 @@ function logoutUser() {
 
 function editUser(userInfo) {
   return dispatch => {
-    fetch('http://localhost:3000/api/v1/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        name: userInfo.name,
-        email: userInfo.email,
-        password: userInfo.password,
-      })
+    api.editUser({
+      name: userInfo.name,
+      email: userInfo.email,
+      password: userInfo.password,
+    }).then(data => {
+      dispatch({ type: "EDITUSER", payload: data })
     })
-      .then(res => res.json())
-      .then(data => {
-        // console.log(data);
-        dispatch({ type: "EDITUSER", payload: data.user })
-      })
   }
 }
 
 function grabActions() {
   return dispatch => {
-    fetch('http://localhost:3000/api/v1/actions')
-      .then(res => res.json())
+    api.getActions()
       .then(data => {
-        // console.log(data);
         dispatch({ type: "ACTIONS", payload: data })
       })
   }
@@ -116,23 +76,9 @@ function toggleModal(modalType) {
 
 function createPlant(plantObj) {
   return dispatch => {
-    const token = localStorage.getItem('token')
-    if (token) {
-      fetch(`http://localhost:3000/api/v1/plants`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(plantObj)
-      })
-        .then(res => res.json())
-        .then(data => {
-          console.log("returned plant", data);
-          dispatch({ type: 'ADDPLANT', payload: data })
-        })
-    }
+    api.createPlant(plantObj).then(data => {
+      dispatch({ type: 'ADDPLANT', payload: data })
+    })
   }
 }
 
@@ -140,48 +86,23 @@ function deletePlant(plant) {
   console.log(plant.id);
 
   return dispatch => {
-    const token = localStorage.getItem('token')
-    if (token) {
-      fetch(`http://localhost:3000/api/v1/plants/${plant.id}`, {
-        method: 'DELETE',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
+    api.deletePlant(plant.id)
+      .then(data => {
+        dispatch({ type: 'DELETEPLANT', payload: data })
       })
-        .then(res => res.json())
-        .then(data => {
-          // console.log(data);
-          dispatch({ type: 'DELETEPLANT', payload: data })
-        })
-    }
   }
 }
 
 function createPlantLog(plantID, actionID) {
   return dispatch => {
-    const token = localStorage.getItem('token')
-    if (token) {
-      fetch('http://localhost:3000/api/v1/logs', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          plant_id: plantID,
-          action_id: actionID,
-          amount: null,
-        })
+    api.createLog({
+      plant_id: plantID,
+      action_id: actionID,
+      amount: null,
+    })
+      .then(data => {
+        dispatch({ type: 'CREATEPLANTLOG', payload: data })
       })
-        .then(res => res.json())
-        .then(data => {
-          // console.log(data);
-          dispatch({ type: 'CREATEPLANTLOG', payload: data })
-        })
-    }
   }
 }
 
