@@ -25,6 +25,7 @@
 .login-row1 {
   padding-left: 5vw;
   padding-right: 5vw;
+  text-align: center
 }
 
 .login-row2 {
@@ -38,11 +39,19 @@
   padding-bottom: 2vh;
   margin-top: 4vh;
   border-radius: 20px;
+  display: inline-block;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .login-input input::placeholder {
   text-align: center;
-  font-size: 3vw;
+  font-size: 2vw;
+}
+
+.login-input input select textarea{
+  text-align: center;
+  font-size: 6vw;
 }
 
 .login-submit {
