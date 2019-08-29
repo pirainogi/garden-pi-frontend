@@ -1,7 +1,5 @@
 .userPlants {
-  /* border-style: solid;
-  border-width: 3px;
-  border-color: mediumseagreen; */
+
 }
 
 .user-plant-title {
@@ -13,9 +11,6 @@
 }
 
 .create-plant-row {
-  /* border-style: solid;
-  border-width: 3px;
-  border-color: orange; */
   text-align: center;
 }
 
@@ -34,14 +29,9 @@
 
 .plant-card-container {
   height: 65vh;
-  /* border-style: solid;
-  border-width: 3px;
-  border-color: mediumseagreen; */
   margin-top: 1vh;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto;
-  /* grid-column-gap: 1.5vh; */
-  /* align-items: stretch; */
   overflow-y: auto;
 }

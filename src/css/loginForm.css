@@ -4,20 +4,31 @@
   border-color: rgb(150, 171, 108);
   border-radius: 36px 36px 0 0;
   height: 30vh;
+  margin-left: 8vw;
+  margin-right: 8vw;
 }
 
 .login-title {
-  font-size: 4.5vw;
+  font-size: 3.5vw;
   margin-top: 3vh;
   margin-left: 4vh;
   color: #404040;
+  text-align: center;
 }
 
 .login-input {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
-  justify-content: space-evenly;
+}
+
+.login-row1 {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.login-row2 {
+  padding-left: 5vw;
 }
 
 .login-input input {
@@ -40,9 +51,7 @@
   border-radius: 20px;
   color: white;
   text-decoration: none;
-  font-size: 3vw;
-  margin-top: 2vh;
-  margin-left: 5.5vh;
+  font-size: 2vw;
 }
 
 .bottombox {
@@ -52,7 +61,8 @@
   border-radius: 0 0 36px 36px;
   height: 9vh;
   background-color: rgb(150, 171, 108);
-  /* margin-top: 15vh; */
+  margin-left: 8vw;
+  margin-right: 8vw;
 }
 
 .signup-link {
