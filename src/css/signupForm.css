@@ -3,6 +3,9 @@
   border-width: 3px;
   border-color: rgb(150, 171, 108);
   border-radius: 36px 36px 0 0;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  height: 60vh;
 }
 
 .signup-title {
@@ -10,13 +13,18 @@
   margin-top: 3vh;
   margin-left: 4vh;
   color: #404040;
+  text-align: center;
+
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center
 }
 
 .signup-input {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  justify-content: space-evenly;
+  text-align: center
 }
 
 .signup-input input {
@@ -26,11 +34,14 @@
   padding-bottom: 2vh;
   margin-top: 4vh;
   border-radius: 20px;
+  width: 55vw;
+  display: inline-block;
+  text-align: center;
 }
 
 .signup-input input::placeholder {
   text-align: center;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 .signup-submit {
@@ -39,6 +50,6 @@
   border-radius: 20px;
   color: #404040;
   text-decoration: none;
-  font-size: 3vw;
-  margin-top: 2vh;
+  font-size: 1.5vw;
+  margin-top: 0.5vh;
 }

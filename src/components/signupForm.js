@@ -42,16 +42,18 @@ class SignupForm extends Component {
             <span>Signup for Garden Party</span>
           </div>
           <form onSubmit={this.handleSubmit}>
-            <div className='signup-input'>
+            <div className='signup-form'>
+              <div className='signup-input'>
               <input type="text" name="name" placeholder='Name (First and Last)' onChange={this.handleChange} value={this.state.name}/>
               <input type="text" name="email" placeholder='Email' onChange={this.handleChange} value={this.state.email}/>
               <input type="password" name="password" placeholder='Password' onChange={this.handleChange} value={this.state.password}/>
               <input type="password" name="matching_password" placeholder='Retype Password' onChange={this.handleChange} value={this.state.matching_password}/>
-            </div>
-            <div className='bottombox'>
-              <input type="submit" value="Submit" className='signup-submit'/>
+              </div>
             </div>
           </form>
+        </div>
+        <div className='bottombox'>
+          <input type="submit" value="Submit" className='signup-submit'/>
         </div>
       </div>
     )
