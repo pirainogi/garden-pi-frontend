@@ -22,10 +22,14 @@ class SignupForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     console.log('sending the fetch');
-    if(this.state.password === this.state.matching_password){
+    if(this.state.name !== '' && this.state.email !== '' && this.state.password !== '' && this.state.password === this.state.matching_password){
       this.props.signupUser(this.state)
+      const token = localStorage.getItem('token')
+      if(token){
+        this.props.history.push('/profile')
+      }
     } else {
-      alert(`Your passwords don't match! Try again.`)
+      alert(`We can't sign you up for the Garden Party! Try again.`)
     }
   }
 
