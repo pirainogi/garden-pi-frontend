@@ -3,7 +3,7 @@
   border-width: 3px;
   border-color: rgb(150, 171, 108);
   border-radius: 36px 36px 0 0;
-  height: 30vh;
+  height: 40vh;
   margin-left: 8vw;
   margin-right: 8vw;
 }
@@ -23,13 +23,15 @@
 }
 
 .login-row1 {
+  margin-top: 2vh;
   padding-left: 5vw;
   padding-right: 5vw;
   text-align: center
 }
 
 .login-row2 {
-  padding-left: 5vw;
+  text-align: center;
+  display: inline-block;
 }
 
 .login-input input {
@@ -49,18 +51,23 @@
   font-size: 2vw;
 }
 
-.login-input input select textarea{
-  text-align: center;
-  font-size: 6vw;
-}
-
 .login-submit {
   background-color: rgb(150, 171, 108);
   padding: .8vw;
   border-radius: 20px;
   color: white;
   text-decoration: none;
-  font-size: 2vw;
+  /* text-align: center; */
+  font-size: 1.5vw;
+  position: relative;
+  top: -20px;
+  /* left: 2vw; */
+  width: 1vw;
+}
+
+.login-submit input {
+  text-align: center;
+  display: inline-block;
 }
 
 .bottombox {
