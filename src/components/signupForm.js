@@ -21,7 +21,7 @@ class SignupForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log('sending the fetch');
+    // console.log('sending the fetch');
     if(this.state.name !== '' && this.state.email !== '' && this.state.password !== '' && this.state.password === this.state.matching_password){
       this.props.signupUser(this.state)
       const token = localStorage.getItem('token')

@@ -22,10 +22,7 @@ class LoginForm extends Component {
     e.preventDefault()
     console.log('sending the login fetch');
     this.props.loginUser(this.state)
-    const token = localStorage.getItem('token')
-    if(token){
-      this.props.history.push('/profile')
-    }
+    this.props.history.push('/profile')
   }
 
   render(){
