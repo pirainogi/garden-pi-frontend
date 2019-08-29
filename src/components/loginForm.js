@@ -20,13 +20,11 @@ class LoginForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log('sending the login fetch');
     this.props.loginUser(this.state)
     this.props.history.push('/profile')
   }
 
   render(){
-    // console.log('login form component state', 'state:', this.state, "props:", this.props);
     return(
       <div>
         <div className="loginForm">

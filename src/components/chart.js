@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 import chartXkcd from 'chart.xkcd';
-import { XY } from "chart.xkcd-react"
+import { Line, XY } from "chart.xkcd-react"
 
 class Chart extends Component {
 
@@ -33,11 +33,11 @@ class Chart extends Component {
     console.log('data', this.state.data);
     return(
       <div className="chart">
-        <XY
+        < XY
           config={{
             title: 'Plant Health', //optional
             xLabel: 'Time', //optional
-            yLabel: 'Health', //optional
+            yLabel: 'Watered', //optional
             data: {
               datasets: [{
                 label: 'Red Begonia',
