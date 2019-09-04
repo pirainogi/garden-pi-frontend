@@ -3,17 +3,17 @@ Developed by [Gabbie Piraino](https://github.com/pirainogi), [Steven Balasta](ht
 
 ** Work in Progress **
 
-## Built With
----
-### Python
+** Built With **
+======
+#### Python
 AWS DynamoDB  
-### Ruby
+#### Ruby
 Rails  
-### Javascript
+#### Javascript
 ReactJS  
 AWS Lambda  
-### HTML5
-### CSS3
+#### HTML5
+#### CSS3
 
 
 
@@ -32,7 +32,9 @@ Please find the AWS IOT at [Garden-Pi-IOT](https://github.com/garden-pi/garden-p
 
 You will need `node` or `yarn` installed on your computer in order to run this app.
 
-In order to run this app, first clone the server repo down onto your local machine and follow the instructions in the readme to spin up the server. Then clone this repo down onto your local machine and navigate to that directory. Then install the necessary dependencies with either:
+In order to run this app, first clone the [server repo](https://github.com/garden-pi/garden-pi-api) down onto your local machine and follow the instructions in the readme to spin up the server.
+
+Then clone this repo down onto your local machine and navigate to that directory. Then install the necessary dependencies with either:
 
 - `npm install`
 - `yarn install`
@@ -40,9 +42,13 @@ In order to run this app, first clone the server repo down onto your local machi
 Then you can start running the program with `npm start`.
 
 ## NPM Packages
-- Redux
-- React-DOM
-- React-Router-DOM
+- **Redux**
+- **Thunk** (Redux-Thunk)
+- **React-DOM**
+- **React-Router-DOM**
+- **Chart.xkcd** (Chart.xkcd-React)
+- **DayJS**
+- **FontAwesome** (React-FontAwesome, FontAwesome-Free-Brands, FontAwesome-Free-Brands-SVG-Icons, FontAwesome-SVG-Core, FontAwesome-Free-Solid-SVG-Icons)
 
 # Features
 - New clients can create new accounts that are authenticated and authorized
