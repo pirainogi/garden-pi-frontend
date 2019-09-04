@@ -4,21 +4,16 @@ Developed by [Gabbie Piraino](https://github.com/pirainogi), [Steven Balasta](ht
 ** Work in Progress **
 
 ## Built With
-* Python
-
-   AWS DynamoDB
-
-* Ruby
-
-   Rails  
-
-* Javascript
-
-   ReactJS  
-   AWS Lambda  
-
-* HTML5
-* CSS3
+---
+### Python
+AWS DynamoDB  
+### Ruby
+Rails  
+### Javascript
+ReactJS  
+AWS Lambda  
+### HTML5
+### CSS3
 
 
 
