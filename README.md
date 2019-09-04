@@ -5,12 +5,12 @@ Developed by [Gabbie Piraino](https://github.com/pirainogi), [Steven Balasta](ht
 
 ## Built With
 * Python
-⋅⋅⋅AWS DynamoDB
+   AWS DynamoDB  
 * Ruby
-⋅⋅⋅Rails
+   Rails  
 * Javascript
-⋅⋅⋅ReactJS
-⋅⋅⋅AWS Lambda
+   ReactJS  
+   AWS Lambda  
 * HTML5
 * CSS3
 
