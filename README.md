@@ -1,19 +1,23 @@
 # GARDEN PI
-Frontend developed by [Gabbie Piraino](https://github.com/pirainogi); project developed with [Steven Balasta](https://github.com/sbal13), [Ian Hollander](https://github.com/ihollander), and [Vishal Patel](https://github.com/vishalpatel2890)
+Developed by [Gabbie Piraino](https://github.com/pirainogi), [Steven Balasta](https://github.com/sbal13), [Ian Hollander](https://github.com/ihollander), and [Vishal Patel](https://github.com/vishalpatel2890)
 
 ** Work in Progress **
 
 ## Built With
 * Python
+⋅⋅⋅AWS DynamoDB
 * Ruby
+⋅⋅⋅Rails
 * Javascript
-
-* AWS DynamoDB
-* AWS Lambda
-* Rails
-* React
+⋅⋅⋅ReactJS
+⋅⋅⋅AWS Lambda
 * HTML5
 * CSS3
+
+
+
+
+
 
 Please find the Rails database at [Garden-Pi-API](https://github.com/garden-pi/garden-pi-api). **You will need to create an API key with the Trefle API in order to seed your data.**
 

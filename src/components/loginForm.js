@@ -20,13 +20,11 @@ class LoginForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log('sending the login fetch');
     this.props.loginUser(this.state)
     this.props.history.push('/profile')
   }
 
   render(){
-    // console.log('login form component state', 'state:', this.state, "props:", this.props);
     return(
       <div>
         <div className="loginForm">
@@ -35,8 +33,13 @@ class LoginForm extends Component {
           </div>
           <form onSubmit={this.handleSubmit}>
               <div className='login-input'>
-                <input type="text" name="email"  placeholder='Email' onChange={this.handleChange} value={this.state.email}/>
-                <input type="password" name="password"  placeholder='Password' onChange={this.handleChange} value={this.state.password}/>
+                <div className='login-row1'>
+                  <input type="text" name="email"  placeholder='Email' onChange={this.handleChange} value={this.state.email}/>
+                  <input type="password" name="password"  placeholder='Password' onChange={this.handleChange} value={this.state.password}/>
+                </div>
+                <div className='login-row2'>
+                  <input type="submit" value="Login" className='login-submit'/>
+                </div>
               </div>
           </form>
         </div>

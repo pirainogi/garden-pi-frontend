@@ -11,7 +11,7 @@ import '../css/editUser.css'
 class EditUser extends Component {
 
   openCloseModal = () => {
-    console.log('clicking btn');
+    // console.log('clicking btn');
     this.props.toggleModal(this.props.state.showModal ? null : 'EditUser')
   }
 
@@ -23,7 +23,9 @@ class EditUser extends Component {
         <div id="outer-modal">
           <div className="inner-modal">
             <div className="modal-content">
+            <div className='topbox-modal'>
             <button onClick={this.openCloseModal}><FontAwesomeIcon icon={faTimes} size='1x' color={'rgb(150, 171, 108)'}/></button>
+            </div>
             <EditUserForm />
             </div>
           </div>

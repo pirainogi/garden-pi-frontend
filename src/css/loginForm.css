@@ -3,21 +3,35 @@
   border-width: 3px;
   border-color: rgb(150, 171, 108);
   border-radius: 36px 36px 0 0;
-  height: 30vh;
+  height: 40vh;
+  margin-left: 8vw;
+  margin-right: 8vw;
 }
 
 .login-title {
-  font-size: 4.5vw;
+  font-size: 3.5vw;
   margin-top: 3vh;
   margin-left: 4vh;
   color: #404040;
+  text-align: center;
 }
 
 .login-input {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
-  justify-content: space-evenly;
+}
+
+.login-row1 {
+  margin-top: 2vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  text-align: center
+}
+
+.login-row2 {
+  text-align: center;
+  display: inline-block;
 }
 
 .login-input input {
@@ -27,11 +41,14 @@
   padding-bottom: 2vh;
   margin-top: 4vh;
   border-radius: 20px;
+  display: inline-block;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .login-input input::placeholder {
   text-align: center;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 .login-submit {
@@ -40,9 +57,15 @@
   border-radius: 20px;
   color: white;
   text-decoration: none;
-  font-size: 3vw;
-  margin-top: 2vh;
-  margin-left: 5.5vh;
+  font-size: 1.5vw;
+  position: relative;
+  top: -20px;
+  width: 1vw;
+}
+
+.login-submit input {
+  text-align: center;
+  display: inline-block;
 }
 
 .bottombox {
@@ -52,7 +75,9 @@
   border-radius: 0 0 36px 36px;
   height: 9vh;
   background-color: rgb(150, 171, 108);
-  /* margin-top: 15vh; */
+  margin-left: 8vw;
+  margin-right: 8vw;
+  text-align: center;
 }
 
 .signup-link {
