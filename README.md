@@ -51,12 +51,13 @@ Then you can start running the program with `npm start`.
 - **FontAwesome** (React-FontAwesome, FontAwesome-Free-Brands, FontAwesome-Free-Brands-SVG-Icons, FontAwesome-SVG-Core, FontAwesome-Free-Solid-SVG-Icons)
 
 # Features
-- New clients can create new accounts that are authenticated and authorized
-- Users are authenticated with `bcrypt` and `JWT` upon login  
+- New clients can create new accounts that are authenticated and authorized upon sign up
+- Returning users are authenticated with `bcrypt` and `JWT` upon login  
 - Users can edit and update their profile information, or delete their account
 - Users can create and delete plants
 - Users can group their plants
-- Actions instruct users on the care and management of their plants
+- Users can log actions that mirror their real world care and management of their plants
+- Users can review the data associated with their plant's sensor 
 
 # Component Hierarchy
 
