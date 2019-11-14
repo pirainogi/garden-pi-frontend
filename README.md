@@ -50,11 +50,12 @@ Then you can start running the program with `npm start`.
 - React-Router-DOM
 
 # Features
-- New clients can create new accounts that are authenticated and authorized
+- New clients can create new accounts 
 - Users are authenticated with `bcrypt` and `JWT` upon login  
 - Users can edit and update their profile information, or delete their account
 - Users can create and delete plants
 - Users can group their plants
+- Users can review historical plant data as served by the external sensors
 - Actions instruct users on the care and management of their plants
 
 # Component Hierarchy
